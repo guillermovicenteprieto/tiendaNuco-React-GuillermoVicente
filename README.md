@@ -1,3 +1,9 @@
+React Js Coder House | Camada-19795
+
+Profesor: Federico Osandón 
+Tutor: Eric Wajnrajch 
+Alumno: Guillermo Vicente 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
