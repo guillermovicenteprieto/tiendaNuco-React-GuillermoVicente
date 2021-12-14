@@ -14,9 +14,9 @@ function App() {
         <h2>Hola Mundo!!!</h2>
         <NavbarUno />
         <NavbarDos />
-        <NavbarTres />
         <Button>un BOTON</Button>
         <Button>otro BOTON</Button>
+        <NavbarTres />
       </header>
     </div>
   );
