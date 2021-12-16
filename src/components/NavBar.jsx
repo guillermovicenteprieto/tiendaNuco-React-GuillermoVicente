@@ -9,13 +9,11 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
+//import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -57,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function NavbarCuatro() {
+export default function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -120,13 +118,7 @@ export default function NavbarCuatro() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" color="inherit">
-          <Badge>
-            <ShoppingCartIcon />
-          </Badge>
-        </IconButton>
-        </MenuItem>
+      
         <MenuItem>
         <IconButton size="large" color="inherit">
           <Typography variant="h6" color="secondary">
@@ -196,12 +188,6 @@ export default function NavbarCuatro() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton size="large" color="inherit">
-              <Badge>
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-
             <IconButton size="large" color="inherit">
               <Typography variant="h5" color="white">
                 Nosotros
