@@ -1,5 +1,9 @@
 React Js Coder House | Camada-19795
 
+Entrega desafío 'Crea tu Landing', Componente CartWidget en ubicado componente Navbar, y componente ItemListContainer con prop greeting con styling integrado.
+
+Realizada con soporte de estilos basados en Material UI.
+
 Profesor: Federico Osandón 
 Tutor: Eric Wajnrajch 
 Alumno: Guillermo Vicente 
