@@ -1,0 +1,14 @@
+.footerClass {
+    text-align: center;
+    font-size: 1em;
+    background-color: rgb(18, 120, 214);
+}
+
+.addressClass {
+    padding: 1px;
+    color: #000000;
+    font-size: 1em;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: .05em;
+}
