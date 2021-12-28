@@ -1,6 +1,6 @@
 React Js Coder House | Camada-19795
 
-Entrega desafío 'Crea tu Landing', Componente CartWidget ubicado en componente Navbar, y componente ItemListContainer con prop greeting con styling integrado.
+Entrega desafío: 'Contador con botón'. Componente ItemCount que incrementa o decrementa productos a añadir en el carrito.
 
 Realizada con soporte de estilos basados en Material UI.
 
