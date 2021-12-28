@@ -1,20 +1,34 @@
-//import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import "./ItemListContainer.css";
-import ItemCount from "../ItemCount/ItemCount";
+import getProducts from "../../helpers/mock";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({ user, greeting }) => {
 
- return (
-    <div className="itemListContainerClass">
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    getProducts
+      .then((res) => {
+        setProducts(res);
+      })
+      .catch((error) => {
+        console.log("Error en el useEffect", error);
+      });
+  }, []);
+
+  return (
+    <div className="itemListContainer">
       <p className="titleComponent">
         <i>ItemListContainer Component</i>
       </p>
       <h2>
-        hola {user}, {greeting}
+        hola {user}! {greeting}
       </h2>
-      <ItemCount title={"Taza"} description={"Taza cerámica pintada"} initial={1} stock={10} price={100}/>
+      <br />
+      <ItemList products={products} />
     </div>
   );
-
 };
 export default ItemListContainer;

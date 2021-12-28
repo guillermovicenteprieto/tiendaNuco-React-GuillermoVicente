@@ -1,6 +1,6 @@
 React Js Coder House | Camada-19795
 
-Entrega desafío: 'Contador con botón'. Componente ItemCount que incrementa o decrementa productos a añadir en el carrito.
+Entrega desafío: 'CATÁLOGO CON MAPS Y PROMISES'. Componentes Item.js e ItemList.js que muestren algunos productos en el componente ItemListContainer.js.
 
 Realizada con soporte de estilos basados en Material UI.
 
