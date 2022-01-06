@@ -1,6 +1,6 @@
 .itemCountClass{
   padding: 5px;
-  background-color: rgb(63, 156, 152);
+  background-color: #95daeb;
 }
 
 .titleComponent{
@@ -9,6 +9,7 @@
   margin-right: 75px;
   border-radius: 10px;
   padding: 5px;
-  background-color:#ff7fd4;
-  color: #ffffff;
+  background-color:#ffb7f3;
+  color: #000000;
+  font-weight: bolder;
 }

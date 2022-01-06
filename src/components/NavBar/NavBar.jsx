@@ -16,6 +16,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 //import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import CartWidget from "../CartWidget/CartWidget";
+import "./NavBar.css";
 
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
@@ -164,24 +165,14 @@ export default function NavBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          
-          <Typography
-            variant="h3"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "block", sm: "block" } }}
-          >
-            nuco
-          </Typography>
+          <a href="/">
+            <img
+              className="logoPrincipal"
+              src="../nucosolo.png"
+              title="NUCO arte ilustrado"
+              alt="NUCO arte ilustrado"
+            />
+          </a>
 
           {/* <Search>
             <SearchIconWrapper>

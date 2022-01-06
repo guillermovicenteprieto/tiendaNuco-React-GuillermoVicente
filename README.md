@@ -1,11 +1,14 @@
 React Js Coder House | Camada-19795
 
-Entrega desafío: 'CATÁLOGO CON MAPS Y PROMISES'. Componentes Item.js e ItemList.js que muestren algunos productos en el componente ItemListContainer.js.
+Entrega desafío "Detalle del Producto".
+
+Componente ItemDetailContainer con la misma premisa que ItemListContainer, y componente ItemDetail que muestra la vista de detalle de un ítem incluyendo su descripción, una foto y el precio.
 
 Realizada con soporte de estilos basados en Material UI.
 
 Profesor: Federico Osandón 
-Tutor: Eric Wajnrajch 
+Tutor Coordinador: Eric Wajnrajch 
+Revisiones: Francisco García Méndez
 Alumno: Guillermo Vicente 
 
 # Getting Started with Create React App

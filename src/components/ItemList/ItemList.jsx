@@ -1,36 +1,26 @@
 import Item from "../Item/Item";
+import "./ItemList.css";
 
 const ItemList = ({ products }) => {
   return (
-    <div>
-      <p className="titleComponent">
-        <i>ItemList component</i>
+    <div className="itemList">
+      <p className="itemListTitle">
+        <i>ItemList Component</i>
       </p>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          textAlign: "center",
-          backgroundColor: "#4acdde",
-        }}
-      >
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
         {products &&
-          products.map((product) => {
-            return (
-              <div key={product.id}>
-                <Item
-                  product={product}
-                  category={product.categoria}
-                  id={product.id}
-                  title={product.title}
-                  price={product.price}
-                  description={product.descripcion}
-                  stock={product.stock}
-                  image={product.image}
-                />
-              </div>
-            );
-          })}
+          products.map((product) => (
+            <Item
+              key={product.id}
+              category={product.category}
+              id={product.id}
+              title={product.title}
+              price={product.price}
+              description={product.description}
+              stock={product.stock}
+              image={product.image}
+            />
+          ))}
       </div>
     </div>
   );

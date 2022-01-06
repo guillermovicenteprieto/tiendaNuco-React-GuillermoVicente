@@ -5,9 +5,9 @@ const Footer = () => {
         <footer className="footerClass">
             <address className="addressClass">
                 <p>
-                    React Js Coder House | Camada-19795
+                    React Js Coder House | Camada-19795 | Profesor: Federico Osandón | 
                     <br/>
-                    Profesor: Federico Osandón | Tutor: Eric Wajnrajch | Alumno: Guillermo Vicente 
+                    Tutor Coordinador: Eric Wajnrajch | Revisiones: Francisco García Méndez | Alumno: Guillermo Vicente 
                 </p>
             </address>
         </footer>

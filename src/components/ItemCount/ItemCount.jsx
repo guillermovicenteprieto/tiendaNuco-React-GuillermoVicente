@@ -35,11 +35,10 @@ const ItemCount = ({ title, description, initial, stock, price }) => {
         <i>ItemCount Component</i>
       </p>
       <h3>{title} Nuco</h3>
-      <h4>{description}</h4>
       <h4>Precio: $ {price} </h4>
       {count === 1 && <p>Stock {stock} unid.</p>}
       {count !== 1 && <p>Stock {stock - count} unid.</p>}
-      <p>Seleccione cantidad</p>
+      <h4>Seleccione cantidad</h4>
       <Button
         variant="contained"
         size="large"

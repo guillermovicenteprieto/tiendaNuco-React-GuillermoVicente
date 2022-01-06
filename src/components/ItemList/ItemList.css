@@ -1,20 +1,21 @@
- .itemListContainerTitle{
+.itemListTitle{
     margin-top: 10px;
     margin-left: 75px;
     margin-right: 75px;
     border-radius: 10px;
     padding: 5px;
-    background-color:#ffb7f3;
+    background-color:#7ff0ff;
     color: #000000;
     font-weight: bolder;
 };
-.itemListContainer{
-    border: 3px solid orange;
+.itemList{
+    border: 3px solid #008cff;
     padding: 5px;
-    background-color: #15b610;
+    background-color: #8cdf7c;
     border-radius: 20px;
-    color: #ffffff;
+    color: #000000;
     margin: 10px;
     min-height: 70vh;
- };
+};
+
 

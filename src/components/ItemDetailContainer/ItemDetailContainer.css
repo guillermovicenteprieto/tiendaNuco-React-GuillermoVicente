@@ -1,0 +1,20 @@
+.itemDetailContainer{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    color: #000000;
+    background-color: #f3fccc;
+}
+
+.itemDetailContainerTitle{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 10px;
+    padding: 5px;
+    color: #000000;
+    background-color: #ff7fd4;
+    font-weight: bold;
+}
+
+
