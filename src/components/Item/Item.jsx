@@ -1,5 +1,3 @@
-import { useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
@@ -7,38 +5,24 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import "./Item.css";
+import { Link } from "react-router-dom";
 
-const Item = ({ id, title, image, stock, price, description }) => {
-  
-  // hook state para mostrar y/o ocultar los articulos
-  const [open, setOpen] = useState(false);
-
-  // Funcion que muestra y/o oculta los articulos
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
+const Item = ({ id, title, image, stock, price }) => {
   return (
     <div className="itemContainer">
-      <p
-        style={{
-          margin: "10px",
-          borderRadius: "10px",
-          padding: "5px",
-          backgroundColor: "#e9c3ee",
-          fontWeight: "bolder",
-        }}
-      >
+      {/* <p 
+      style={{ margin: "10px", borderRadius: "10px", padding: "5px", backgroundColor: "#e9c3ee", fontWeight: "bolder"}}>
         <i>Item component</i>
-      </p>
+      </p> */}
       <Grid container>
-        <Box m={1} p={1}>
+        <Box >
           <Card
             sx={{ maxWidth: "300px" }}
-            style={{ borderRadius: "10px", margin:"20px", padding: "20px" }} >
-            <Typography variant="subtitle1" color="primary" component="div">
+            style={{ borderRadius: "10px", margin: "20px", padding: "20px" }}
+          >
+            {/* <Typography variant="subtitle1" color="primary" component="div">
               id: {id} | producto: {title}
-            </Typography>
+            </Typography> */}
             <CardMedia
               component="img"
               image={image}
@@ -53,25 +37,14 @@ const Item = ({ id, title, image, stock, price, description }) => {
             <Typography variant="subtitle1" component="div">
               $ {price}
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              <p> {description}</p>
-            </Typography>
-            <Button
-              variant="contained"
-              size="large"
-              color="warning"
-              onClick={toggleMenu}
-            >
-              {" "}
-              información
-            </Button>
+            <Link to={`/item/${id}`}>
+              <Button variant="contained" size="large" color="warning">
+                información
+              </Button>
+            </Link>
           </Card>
         </Box>
       </Grid>
-
-      {open && (
-        <ItemCount stock={stock} initial={1} price={price} title={title} />
-      )}
     </div>
   );
 };

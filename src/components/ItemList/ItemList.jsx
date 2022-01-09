@@ -4,9 +4,9 @@ import "./ItemList.css";
 const ItemList = ({ products }) => {
   return (
     <div className="itemList">
-      <p className="itemListTitle">
+      {/* <p className="itemListTitle">
         <i>ItemList Component</i>
-      </p>
+      </p> */}
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
         {products &&
           products.map((product) => (

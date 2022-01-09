@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
 import "./ItemCount.css";
+//import Cart from "../Cart/Cart";
 //para paracticar //import { useCounter } from "../../hooks/useCounter";
 
 const ItemCount = ({ title, description, initial, stock, price }) => {
@@ -87,6 +88,7 @@ const ItemCount = ({ title, description, initial, stock, price }) => {
             Producto: {title} Nuco | Cantidad: {count}
           </h4>
           <h4>Total Carrito: $ {count * price}</h4>
+        
         </div>
       )}
     </div>

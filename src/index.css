@@ -11,3 +11,160 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main {
+  text-align: center;
+  color: #ffffff;
+  height: 100vh;
+}
+
+
+/*LOGO*/
+.logoPrincipal {
+  width: 10em;
+  padding: 1px;
+  display: inline-block;
+  border-top: solid 3px #0586e0;
+  border-right: solid 3px #0586e0;
+  border-bottom: solid 3px #0586e0;
+  border-left: solid 3px #0586e0;
+  border-radius: .5em;
+  margin: 1em; 
+}
+
+.footerClass {
+padding: 5px;
+text-align: center;
+font-size: 1em;
+background-color: black;
+}
+
+.addressClass {
+padding: 1px;
+color: #ffffff;
+font-size: 1em;
+text-align: center;
+letter-spacing: .05em;
+}
+
+/* estilos de componente Header */
+.headerContainer {
+width: auto;
+margin: 10px;
+height: 50px;
+background-color: #ff7fd4;
+border: 5px solid #15b610;
+border-radius: 10px;
+}
+
+.headerTitle {
+width: auto;
+margin: 10px;
+color: #ffffff;
+background-color: #e7cc2f;
+border: 5px solid #ee6002;
+border-radius: 10px;
+}
+
+.navbarContainer {
+width: auto;
+margin:auto;
+color:  #ffffff;
+height: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-size: 1em;
+font-weight: bold;
+
+}
+.navbarContainerLink{
+text-decoration: none;
+color:  #153757;
+font-size: 1em;
+font-weight: bold;
+
+}
+
+.tienda {
+margin: 10px;
+border-radius: 10px;
+padding: 20px;
+height: 20px;
+color: #ffffff;
+background-color: #15b610;
+}
+
+.navbarLinks {
+margin: 5px;
+padding: 5px;
+color: #ffffff; 
+background-color: #ee6002;
+text-decoration: none;
+list-style-type: none; 
+border-radius: 5px;
+font-weight: bold;
+font-size: .75em;
+letter-spacing: .05em;
+}
+
+.navbarCuenta {
+margin:7px;
+padding: 5px;
+color: #ffffff; 
+background-color: #269e21;
+text-decoration: none;
+list-style-type: none; 
+border-radius: 5px;
+font-weight: bold;
+font-size: 10px;
+}
+
+.titleComponent{
+display: block;
+margin-left: 75px;
+margin-right: 75px;
+border-radius: 10px;
+padding: 5px;
+background-color:#ff7fd4;
+color: #295e28;
+}
+
+.teamListCard{
+margin: 20px;
+margin-left: 75px;
+margin-right: 75px;
+background-color: #528be7 ;
+color: #e6ccde;
+}
+
+.itemDetailContainer{
+text-align: center;
+border-radius: 10px;
+margin: 10px;
+padding: 10px;
+background-color: #b7d8e7;
+border: solid 5px #0085FF;
+}
+
+.itemDetailContainerChildren{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+text-decoration: none;
+border: 5px solid #ee6002;
+border-radius: 15px;
+text-align: center;
+margin: 10px;
+padding: 20px;
+background-color:#ff7fd4;
+}
+.itemListContainer{
+text-decoration: none;
+border: 5px solid #ee6002;
+border-radius: 15px;
+text-align: center;
+margin: 10px;
+padding: 5px;
+background-color:#528be7;
+}

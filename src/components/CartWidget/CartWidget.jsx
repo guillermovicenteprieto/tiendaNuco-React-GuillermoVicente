@@ -13,8 +13,8 @@ const CartWidget = () => {
                     color="inherit">
                     <Badge badgeContent={0} color="success">
                         <ShoppingCartIcon />
-                    </Badge>
-                </IconButton>
+                    </Badge> 
+                 </IconButton>
             </MenuItem>
         </div>
     )

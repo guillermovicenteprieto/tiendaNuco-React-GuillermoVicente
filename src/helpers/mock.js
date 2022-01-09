@@ -98,6 +98,61 @@ const data = [
     price: "1800",
     stock: "10",
   },
+  {
+    id: "10",
+    image: "../../assets/img/buzoJaguar.jpg",
+    title: "Buzo Jaguar",
+    description:
+      "Buzo ideal para un look urbano o para la playa. Composición: 50% Algodón, 50% Poliéster.Tratamiento: Lavado suave hasta 30°, no usar cloro ni blanqueador, no admite secadora, usar plancha tibia, lavar con colores similares, no dejar en remojo, secar a la sombra.",
+    dimensions: "Talle: S, M, L, XL",
+    category: "Textil",
+    price: "3600",
+    stock: "10",
+  },
+  {
+    id: "11",
+    image: "../../assets/img/buzoOjos.jpg",
+    title: "Buzo Ojos",
+    description:
+      "Buzo con capucha, ideal para un look urbano o para la playa. Composición: 50% Algodón, 50% Poliéster.Tratamiento: Lavado suave hasta 30°, no usar cloro ni blanqueador, no admite secadora, usar plancha tibia, lavar con colores similares, no dejar en remojo, secar a la sombra.",
+    dimensions: "Talle: S, M, L, XL",
+    category: "Textil",
+    price: "3600",
+    stock: "10",
+  },
+  {
+    id: "12",
+    image: "../../assets/img/buzoPrimavera.jpg",
+    title: "Buzo Primavera",
+    description:
+      "Buzo con capucha, ideal para un look urbano o para la playa. Composición: 50% Algodón, 50% Poliéster.Tratamiento: Lavado suave hasta 30°, no usar cloro ni blanqueador, no admite secadora, usar plancha tibia, lavar con colores similares, no dejar en remojo, secar a la sombra.",
+    dimensions: "Talle: S, M, L, XL",
+    category: "Textil",
+    price: "3600",
+    stock: "10",
+  },
+  {
+    id: "13",
+    image: "../../assets/img/remeraFaros.jpg",
+    title: "Remera Faros",
+    description:
+      "Uno de los 'hits' de nuestra colección. Composición: 50% Algodón, 50% Poliéster.Tratamiento: Lavado suave hasta 30°, no usar cloro ni blanqueador, no admite secadora, usar plancha tibia, lavar con colores similares, no dejar en remojo, secar a la sombra.",
+    dimensions: "Talle: S, M, L, XL",
+    category: "Textil",
+    price: "2400",
+    stock: "10",
+  },
+  {
+    id: "14",
+    image: "../../assets/img/remeraJaguar.jpg",
+    title: "Remera Jaguar",
+    description:
+      "Uno de los 'hits' de nuestra colección. Composición: 50% Algodón, 50% Poliéster.Tratamiento: Lavado suave hasta 30°, no usar cloro ni blanqueador, no admite secadora, usar plancha tibia, lavar con colores similares, no dejar en remojo, secar a la sombra.",
+    dimensions: "Talle: S, M, L, XL",
+    category: "Textil",
+    price: "2400",
+    stock: "10",
+  },
 ];
 
 //función de tipo flecha para resolver la promesa, con un setTimeout de 2 segundos luego del bloque de ejecución

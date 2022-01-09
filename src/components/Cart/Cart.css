@@ -1,0 +1,18 @@
+.titleComponent{
+    border-radius: 20px;
+    border : solid 5px #e7cc2f;
+    padding: 5px;
+    color: #000000;
+    background-color: #15b610;
+    font-weight: bold;
+}
+
+.cartContainer{
+    text-decoration: none;
+    border: 5px solid #ee6002;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    background-color:#528be7;
+    }
