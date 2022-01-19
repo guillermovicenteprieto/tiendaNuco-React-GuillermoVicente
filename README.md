@@ -1,34 +1,11 @@
 React Js Coder House | Camada-19795
 
-Entrega desafío "Primera Entrega del Proyecto Final".
+Entrega desafío "Sincronizar counter".
 
-
-Se realiza Primera Entrega del Proyecto Final configurando en App.js el routing usando un BroserRouter.
-
-Aspectos incluídos en el entregable:
-
-Rutas configuradas 
-
-‘/’ navega a <ItemListContainer />
-‘/categorias/:idCategoria’  <ItemListContainer />
-‘/item/:idItem’ navega a <ItemDetailContainer />
-
-
-Links configurados
-
-Click en el brand navega a ‘/’
-Click en un Item.js navega a /item/:id
-Click en una categoría del navbar navega a /categorias/:idCategoria
-
-
-Otros aspectos: 
-
-Se realizaron mejoras de diseño general al sitio y funcionales en algunos componentes con respecto a commits anteriores, y se empleó uso de promesas y API para simulación de componentes Nosotr@s y Tiendas.
 
 Realizada con soporte de estilos basados en Material UI.
 
 Utilización de bibliotea de formularios Formik, para el desarrollo de formulario en componente Contacto
-
 
 Profesor: Federico Osandón 
 Tutor Coordinador: Eric Wajnrajch 

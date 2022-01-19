@@ -10,15 +10,17 @@ const ItemListContainer = ({ user, greeting, marca }) => {
 
   const [loading, setLoading] = useState(true);
 
+  //traigo el párametro id de la url
   const { idCategoria } = useParams();
 
   useEffect(() => {
     setLoading(true);
     if (idCategoria) {
+      //console.log("idCategoria", idCategoria);
       getProducts
         .then((res) => {
           setProducts(
-            res.filter((product) => product.category === idCategoria)
+            res.filter((products) => products.category === idCategoria)
           );
         })
         .catch((error) => {
@@ -46,13 +48,13 @@ const ItemListContainer = ({ user, greeting, marca }) => {
       {/* <p className="itemListContainerTitle">
         <i>ItemListContainer Component</i>
       </p> */}
-        <h3 className="titleComponent">
-          {user} {greeting}
-        </h3>
-        <h2>
-          <i> {marca}</i>
-        </h2>
-      <div>
+      <h2>
+        <i> {marca}</i>
+      </h2>
+      <h3 className="titleComponent">
+        {idCategoria ? `NUCO ${idCategoria}.` : ""} {greeting}
+      </h3>
+      <div >
         {loading && <Spinner />}
         <ItemList products={products} />
       </div>

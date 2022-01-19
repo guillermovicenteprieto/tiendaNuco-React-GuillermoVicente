@@ -2,12 +2,15 @@ import Item from "../Item/Item";
 import "./ItemList.css";
 
 const ItemList = ({ products }) => {
+
   return (
     <div className="itemList">
       {/* <p className="itemListTitle">
         <i>ItemList Component</i>
       </p> */}
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} >
+      <div
+        style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+      >
         {products &&
           products.map((product) => (
             <Item
@@ -19,6 +22,7 @@ const ItemList = ({ products }) => {
               description={product.description}
               stock={product.stock}
               image={product.image}
+              product={product}
             />
           ))}
       </div>

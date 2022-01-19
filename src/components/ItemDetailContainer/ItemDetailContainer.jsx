@@ -10,14 +10,16 @@ const ItemDetailContainer = () => {
 
   const [loading, setLoading] = useState(true);
 
-  // ver! const {idDetalle}=useParams();
-  const {idItem}=useParams();
+  //idDetalle es el parámtro que viene en la url, configurado en el routing
+  const {idDetalle}=useParams();
+  //const {idItem}=useParams();
 
   useEffect(() => {
     setLoading(true);
     getProducts
       .then((res) => {
-        setProduct(res.find((product) => product.id === `${idItem}`));
+        setProduct(res.find((product) => product.id === `${idDetalle}`));
+        //setProduct(res.find((product) => product.id === `${idItem}`));
       })
       .catch((error) => {
         console.log("Error en el useEffect", error);
@@ -25,7 +27,7 @@ const ItemDetailContainer = () => {
       .finally(() => {
         setLoading(false);
       });
-  }, [idItem]);
+  }, [idDetalle]);
 
   return (
     <div
@@ -37,16 +39,10 @@ const ItemDetailContainer = () => {
       </p> */}
       <div>
         {loading && <Spinner />}
-        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+        <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems:"center"}}>
           <ItemDetail
             key={product.id}
-            id={product.id}
-            title={product.title}
-            image={product.image}
-            stock={product.stock}
-            price={product.price}
-            description={product.description}
-            category={product.category}
+            product={product}
           />
         </div>
       </div>

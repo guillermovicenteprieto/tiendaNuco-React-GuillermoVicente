@@ -7,31 +7,40 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import "./ItemDetail.css";
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
 
-const ItemDetail = ({ id, title, image, stock, price, description, category }) => {
+const ItemDetail = ({ product }) => {
+  const { id, title, image, stock, price, description, category, count } =
+    product;
 
-  // hook state para mostrar y/o ocultar los articulos
-  const [open, setOpen] = useState(false);
+  const { agregarAlCarrito } = useContext(cartContext);
 
-  // Funcion que muestra y/o oculta los articulos
-  const toggleMenu = () => {
-    setOpen(!open);
+  //console.log(cartList);
+
+  const [show, setShow] = useState(true);
+
+  const onAdd = (count) => {
+    //console.log("cantidad seleccionada : " + count);
+    setShow(false);
+
+    alert(` se agregaron ${count} productos al carrito`);
+
+    agregarAlCarrito({...product, cantidad: count});
+
   };
+
+  //console.log(cartList);
 
   return (
     <div className="itemDetail">
-      {/* <p className="itemDetailTitle">
-        <i>ItemDetail component</i>
-      </p> */}
-      <Grid container>
+      <Grid container style={{ alignItems: "center" }}>
         <Box m={1} p={1}>
           <Card
-            sx={{ maxWidth: "500px" }}
+            sx={{ maxWidth: "24rem" }}
             style={{ borderRadius: "10px", margin: "10px", padding: "10px" }}
           >
-            <Typography variant="subtitle" color="primary" component="div">
-              id: {id} | categoría: {category} | producto: {title}
-            </Typography>
             <CardMedia
               component="img"
               image={image}
@@ -49,21 +58,40 @@ const ItemDetail = ({ id, title, image, stock, price, description, category }) =
             <Typography variant="body1" gutterBottom>
               {description}
             </Typography>
-            <Button
-              variant="contained"
-              size="large"
-              color="success"
-              onClick={toggleMenu}
-            >
-              {" "}
-              comprar
-            </Button>
           </Card>
+
+        </Box>
+
+        <Box m={1} p={1}>
+          {show ? (
+            <ItemCount
+              id={id}
+              stock={stock}
+              initial={1}
+              price={price}
+              title={title}
+              category={category}
+              count={count}
+              onAdd={onAdd}
+              //agregarAlCarrito={agregarAlCarrito}
+            />
+          ) : (
+            <Grid>
+              <Link to="/cart" style={{ textDecoration: "none" }}
+              >
+                <Button variant="contained" size="large" color="success">
+                  Terminar
+                </Button>
+              </Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Button variant="contained" size="large" color="warning">
+                  Seguir comprando
+                </Button>
+              </Link>
+            </Grid>
+          )}
         </Box>
       </Grid>
-      {open && (
-        <ItemCount stock={stock} initial={1} price={price} title={title} />
-      )}
     </div>
   );
 };

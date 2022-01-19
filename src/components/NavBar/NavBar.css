@@ -15,6 +15,13 @@
     15b610*/
 }
 
+navbarLinksActive{
+    background-color: #0586e0;
+    color: white;
+}
+
+
+
 .navbarLinks {
     margin: 5px;
     padding: 5px;
@@ -32,12 +39,12 @@
     margin: 5px;
     padding: 5px;
     color: #ffffff; 
-    background-color: #d810df;
+    background-color: #d439da;
     text-decoration: none;
     list-style-type: none; 
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1em;
+    font-size: .8em;
     letter-spacing: .05em;
 }
 

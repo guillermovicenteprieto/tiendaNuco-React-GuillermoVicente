@@ -7,16 +7,59 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
-//import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CartWidget from "../CartWidget/CartWidget";
-import { Link, NavLink } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 //hoja de estilos
 import "./NavBar.css";
+
+//barra búsqueda
+// import { styled, alpha } from "@mui/material/styles";
+// import InputBase from "@mui/material/InputBase";
+// import SearchIcon from "@mui/icons-material/Search";
+
+// const Search = styled("div")(({ theme }) => ({
+//   position: "relative",
+//   borderRadius: theme.shape.borderRadius,
+//   backgroundColor: alpha(theme.palette.common.white, 0.15),
+//   "&:hover": {
+//     backgroundColor: alpha(theme.palette.common.white, 0.25),
+//   },
+//   marginRight: theme.spacing(2),
+//   marginLeft: 0,
+//   width: "100%",
+//   [theme.breakpoints.up("sm")]: {
+//     marginLeft: theme.spacing(3),
+//     width: "auto",
+//   },
+// }));
+
+// const SearchIconWrapper = styled("div")(({ theme }) => ({
+//   padding: theme.spacing(0, 2),
+//   height: "100%",
+//   position: "absolute",
+//   pointerEvents: "none",
+//   display: "flex",
+//   alignItems: "center",
+//   justifyContent: "center",
+// }));
+
+// const StyledInputBase = styled(InputBase)(({ theme }) => ({
+//   color: "inherit",
+//   "& .MuiInputBase-input": {
+//     padding: theme.spacing(1, 1, 1, 0),
+//     // vertical padding + font size from searchIcon
+//     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+//     transition: theme.transitions.create("width"),
+//     width: "100%",
+//     [theme.breakpoints.up("md")]: {
+//       width: "20ch",
+//     },
+//   },
+// }));
+
 /* 
-    PARA TRABAJAR:
-  1. Crear una constante que contenga el array de objetos de tiendas fisicas
-  2. Crear una constante que contenga el array de objetos de productos en el carrito
+  PARA TRABAJAR:
+  1. Crear una constante que contenga el array de objetos de productos en el carrito
   VER ESTO:
   <NavLink
     style={({ isActive }) => {
@@ -26,10 +69,7 @@ import "./NavBar.css";
         color: isActive ? "red" : ""
       };
     }}
-    to={`/invoices/${invoice.number}`}
-    key={invoice.number}
-    >
-    {invoice.name}
+
   </NavLink>
 */
 
@@ -75,8 +115,7 @@ const NavBar = () => {
       onClose={handleMenuClose}
     >
       <MenuItem>
-
-        <Link to="/logIn" className="navbarCuenta">
+        <Link to="/Formulario" className="navbarCuenta">
           {" "}
           LOG IN{" "}
         </Link>
@@ -109,42 +148,36 @@ const NavBar = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          marginTop: 5,
-          padding: 5,
+          alignItems: "end",
+          backgroundColor: "transparent",
+          marginTop: .5,
+          padding: .5,
         }}
       >
-        <MenuItem>
-          <Link to="/cart">
+        {/* <Link to="/cart">
             <CartWidget />
-          </Link>
-          <Link to="/nosotr@s" className="navbarLinks">
+          </Link> */}
+        {/* <Link to="/nosotr@s" className="navbarLinks">
             {" "}
             NOSOTR@S{" "}
-          </Link>
-          <MenuItem>
-                <NavLink to="categorias/Cerámica" className="navbarLinksCat">
-                  {" "}
-                  Cerámica{" "}
-                </NavLink>
-                <Link to="categorias/Textil" className="navbarLinksCat">
-                  {" "}
-                  Textil{" "}
-                </Link>
-              </MenuItem>
-          {/* <Link to="/productos" className="navbarLinks">
-            {" "}
-            PRODUCTOS{" "}
           </Link> */}
-          <Link to="/tiendas" className="navbarLinks">
-            {" "}
-            TIENDAS{" "}
-          </Link>
-          <Link to="/contacto" className="navbarLinks">
-            {" "}
-            CONTACTO{" "}
-          </Link>
-        </MenuItem>
+
+        <Link to="categorias/Cerámica" className="navbarLinksCat">
+          {" "}
+          Cerámica{" "}
+        </Link>
+        <Link to="categorias/Textil" className="navbarLinksCat">
+          {" "}
+          Textil{" "}
+        </Link>
+        <Link to="/tiendas" className="navbarLinks">
+          {" "}
+          TIENDAS{" "}
+        </Link>
+        <Link to="/contacto" className="navbarLinks">
+          {" "}
+          CONTACTO{" "}
+        </Link>
       </div>
     </Menu>
   );
@@ -161,6 +194,18 @@ const NavBar = () => {
               alt="NUCO arte ilustrado"
             />
           </Link>
+          {/* 
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              color="primary"
+              placeholder="Buscar producto…"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search> */}
+
           <Box sx={{ flexGrow: 1 }} />
           <Link to="/cart">
             <CartWidget />
@@ -179,31 +224,106 @@ const NavBar = () => {
           >
             <AccountCircle />
           </IconButton>
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <MenuItem>
-              <MenuItem>
-                <NavLink to="categorias/Cerámica" className="navbarLinksCat">
-                  {" "}
-                  Cerámica{" "}
-                </NavLink>
-                <Link to="categorias/Textil" className="navbarLinksCat">
-                  {" "}
-                  Textil{" "}
-                </Link>
-              </MenuItem>
-              <Link to="/nosotr@s" className="navbarLinks">
+              <Link
+                to="/categorias/Textil"
+                className="navbarLinksCat"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "18px" : "",
+                //   };
+                // }}
+              >
+                {" "}
+                TEXTIL{" "}
+              </Link>
+
+              <Link
+                to="/categorias/Cerámica"
+                className="navbarLinksCat"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "18px" : "",
+                //   };
+                // }}
+              >
+                {" "}
+                CERAMICA{" "}
+              </Link>
+
+              <Link
+                to="/nosotr@s"
+                className="navbarLinks"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "15px" : "",
+                //   };
+                // }}
+              >
                 {" "}
                 NOSOTR@S{" "}
               </Link>
-              <Link to="/productos" className="navbarLinks">
+
+              {/* <Link
+                to="/productos"
+                className="navbarLinks"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "15px" : "",
+                //   };
+                // }}
+              >
                 {" "}
                 PRODUCTOS{" "}
-              </Link>
-              <Link to="/tiendas" className="navbarLinks">
+              </Link> */}
+              <Link
+                to="/tiendas"
+                className="navbarLinks"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "15px" : "",
+                //   };
+                // }}
+              >
                 {" "}
                 TIENDAS{" "}
               </Link>
-              <Link to="/contacto" className="navbarLinks">
+
+              <Link
+                to="/contacto"
+                className="navbarLinks"
+                // style={({ isActive }) => {
+                //   return {
+                //     backgroundColor: isActive ? "#e7cc2f" : "",
+                //     padding: isActive ? "10px" : "",
+                //     borderRadius: isActive ? "10px" : "",
+                //     border: isActive ? "5px solid #0586e0" : "",
+                //     fontSize: isActive ? "15px" : "",
+                //   };
+                // }}
+              >
                 {" "}
                 CONTACTO{" "}
               </Link>
