@@ -26,7 +26,7 @@ const Contacto = () => {
           setTimeout(() => setFormularioEnviado(true), 500);
           setTimeout(() => resetForm(), 7000);
         }}
-        //propiedades de validacion
+        //propiedades de validación
         validate={(valores) => {
           let errores = {};
           //vaidacion del nombre
@@ -41,7 +41,7 @@ const Contacto = () => {
           } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.apellido)) {
             errores.apellido = "El apellido sólo puede contener letras";
           }
-          //validacion del correo
+          //validación del correo
           if (!valores.correo) {
             errores.correo = "Por favor ingrese un correo de usuarix";
           } else if (
@@ -60,7 +60,9 @@ const Contacto = () => {
             {!formularioEnviado && (
               <>
                 <div>
-                  <label htmlFor="nombre"><h4>Nombre</h4></label>
+                  <label htmlFor="nombre">
+                    Nombre
+                  </label>
                   <Field
                     type="text"
                     name="nombre"
@@ -76,7 +78,9 @@ const Contacto = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="nombre"><h4>Apellido</h4></label>
+                  <label htmlFor="apellido">
+                    Apellido
+                  </label>
                   <Field
                     type="text"
                     name="apellido"
@@ -118,15 +122,6 @@ const Contacto = () => {
                   </Field>
                 </div>
                 <div>
-                  <h4> Sexo </h4>
-                  <label>
-                    <Field type="radio" name="sexo" value="hombre" />
-                    <span>Hombre</span>
-                    <Field type="radio" name="sexo" value="mujer" />
-                    <span>Mujer</span>
-                    <Field type="radio" name="sexo" value="otrx" />
-                    <span>OtrX</span>
-                  </label>
                   <label>
                     <Field name="mensaje" as="textarea" placeholder="Mensaje" />
                   </label>
@@ -158,6 +153,7 @@ const Contacto = () => {
           </Form>
         )}
       </Formik>
+      
     </div>
   );
 };

@@ -9,6 +9,7 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+//import { useCartContext } from "../../context/cartContext";
 //hoja de estilos
 import "./NavBar.css";
 
@@ -57,23 +58,14 @@ import "./NavBar.css";
 //   },
 // }));
 
-/* 
-  PARA TRABAJAR:
-  1. Crear una constante que contenga el array de objetos de productos en el carrito
-  VER ESTO:
-  <NavLink
-    style={({ isActive }) => {
-      return {
-        display: "block",
-        margin: "1rem 0",
-        color: isActive ? "red" : ""
-      };
-    }}
 
-  </NavLink>
-*/
 
 const NavBar = () => {
+
+  // const {agregarAlCarrito} = useCartContext()
+
+  // const carrito = agregarAlCarrito()
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -154,14 +146,6 @@ const NavBar = () => {
           padding: .5,
         }}
       >
-        {/* <Link to="/cart">
-            <CartWidget />
-          </Link> */}
-        {/* <Link to="/nosotr@s" className="navbarLinks">
-            {" "}
-            NOSOTR@S{" "}
-          </Link> */}
-
         <Link to="categorias/Cerámica" className="navbarLinksCat">
           {" "}
           Cerámica{" "}

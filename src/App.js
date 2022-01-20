@@ -7,9 +7,8 @@ import Nosotros from "./components/Nosotros/Nosotros";
 import Tiendas from "./components/Tiendas/Tiendas";
 import Contacto from "./components/Contacto/Contacto";
 import Footer from "./components/Footer/Footer";
-
 import FormularioLogIn from "./components/Contacto/FormularioLogIn";
-
+import Pago from "./components/Cart/Pago";
 import { CartContextProvider } from "./context/cartContext";
 
 function App() {
@@ -50,6 +49,8 @@ function App() {
             {/* <Route exact path="/item/:idItem" element={<ItemDetailContainer />} /> */}
 
             <Route exact path="/cart" element={<Cart />} />
+
+            <Route exact path="/cart/Pago" element={<Pago />} />
 
             <Route exact path="/nosotr@s" element={<Nosotros />} />
 

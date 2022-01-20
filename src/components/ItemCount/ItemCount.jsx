@@ -1,11 +1,7 @@
 import { useState } from "react";
-import Button from "@mui/material/Button";
 import "./ItemCount.css";
 import Cart from "../Cart/Cart";
-// import { Box } from "@mui/system";
-//import { Link } from "react-router-dom";
-
-//import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
@@ -13,8 +9,6 @@ import Box from "@mui/material/Box";
 import { Divider } from "@mui/material";
 
 const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
-
-
   const [count, setCount] = useState(initial);
 
   const addItem = () => {
@@ -24,8 +18,8 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
   };
 
   const quitItem = () => {
-    count > 1
-      ? setCount(count - 1)
+    count > initial
+      ? setCount(count - initial)
       : alert("Debes tener al menos un producto seleccionado");
   };
 
@@ -34,7 +28,8 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
   };
 
   const [show, setShow] = useState(false);
-  // console.log(setShow)
+
+  console.log(setShow)
 
   return (
     <div
@@ -45,14 +40,11 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
         justifyContent: "center",
       }}
     >
-      {/* <p className="titleComponent">
-        <i>ItemCount Component</i>
-      </p> */}
       <Grid container>
-        <Box m={1} p={1}>
+        <Box>
           <Card
             className="titleComponent"
-            sx={{ maxWidth: "500px" }}
+            sx={{ maxWidth: "150px" }}
             style={{
               borderRadius: "10px",
               margin: "10px",
@@ -63,34 +55,27 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
               justifyContent: "center",
             }}
           >
-            <Typography variant="subtitle" color="primary" component="div">
-              id: {id} | producto: {title}
+            <Typography variant="p" component="div">
+              Precio: $ {price}
             </Typography>
-            <Divider />
-            {/* <CardMedia component="div" title={title} width="500" alt={title} /> */}
-            <Typography variant="h5" mt="30px" component="div">
-              {title} NUCO
-            </Typography>
-            <Typography variant="h6" component="div">
+            <Typography variant="p" component="div">
               {count === 1 && <p>Stock {stock} unid.</p>}
               {count !== 1 && <p>Stock {stock - count} unid.</p>}
             </Typography>
-            <Typography variant="h6" component="div">
-              Precio: $ {price}
-            </Typography>
+
             <Button
               variant="contained"
-              size="large"
-              style={{ backgroundColor: "#269e21", marginTop: "10px" }}
+              size="medium"
+              style={{ backgroundColor: "#269e21", marginTop: "5px" }}
               onClick={addItem}
               disabled={count === stock}
             >
               +
             </Button>
             <Typography
-              variant="h3"
-              mt="20px"
-              mb="20px"
+              variant="h4"
+              mt="5px"
+              mb="5px"
               color="#d439da"
               component="div"
             >
@@ -98,7 +83,7 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
             </Typography>
             <Button
               variant="contained"
-              size="large"
+              size="medium"
               style={{ backgroundColor: "#ee3102", marginBottom: "10px" }}
               onClick={quitItem}
               disabled={count === initial}
@@ -108,8 +93,12 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
             <div>
               <Button
                 variant="contained"
-                size="large"
-                style={{ backgroundColor: "#0586e0", marginTop: "10px" }}
+                size="medium"
+                style={{
+                  backgroundColor: "#0586e0",
+                  marginTop: "10px",
+                  marginBottom: "10px",
+                }}
                 onClick={resetItem}
               >
                 Reset
@@ -117,11 +106,11 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
             </div>
             <Divider />
 
-            <Typography variant="h6" mt="30px" component="div">
+            <Typography variant="p" mt="10px" component="div">
               Cantidad Seleccionada: {count}
             </Typography>
 
-            <Typography variant="h5" mt="10px" component="div">
+            <Typography variant="h6" mt="10px" component="div">
               Total: $ {count * price}
             </Typography>
 
@@ -131,11 +120,10 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
                 color: "white",
                 backgroundColor: "#0586e0",
                 marginTop: "20px",
-                marginBottom: "20px",
+                marginBottom: "10px",
               }}
               onClick={() => onAdd(count)}
               disabled={count < 1 && "disabled"}
-
             >
               Agregar al carrito
             </Button>
@@ -145,15 +133,15 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
 
       <div>
         {show && (
-        <Cart
-          title={title}
-          count={count}
-          initial={initial}
-          stock={stock}
-          price={price}
-          onAdd={onAdd}
-          id={id}
-        />
+          <Cart
+            title={title}
+            count={count}
+            initial={initial}
+            stock={stock}
+            price={price}
+            onAdd={onAdd}
+            id={id}
+          />
         )}
       </div>
     </div>

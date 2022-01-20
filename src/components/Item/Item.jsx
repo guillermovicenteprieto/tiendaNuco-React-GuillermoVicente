@@ -8,8 +8,7 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ id, title, image, stock, price, category }) => {
-
-    return (
+  return (
     <div key={id} className="itemContainer">
       {/* <p 
       style={{ margin: "10px", borderRadius: "10px", padding: "5px", backgroundColor: "#e9c3ee", fontWeight: "bolder"}}>
@@ -21,6 +20,12 @@ const Item = ({ id, title, image, stock, price, category }) => {
             sx={{ maxWidth: "250px" }}
             style={{ borderRadius: "10px", margin: "20px", padding: "20px" }}
           >
+            <Typography variant="subtitle1" color="primary" component="div">
+              Categoría: {category}
+            </Typography>
+            <Typography variant="h6" component="div">
+              {title} NUCO
+            </Typography>
             <CardMedia
               component="img"
               image={image}
@@ -29,17 +34,14 @@ const Item = ({ id, title, image, stock, price, category }) => {
               height="250"
               alt={title}
             />
-            <Typography variant="h6" component="div">
-              {title} NUCO
-            </Typography>
             <Typography variant="subtitle1" component="div">
-              $ {price}
+              Precio $ {price}
             </Typography>
             <Typography variant="subtitle1" color="primary" component="div">
-              Categoría: {category}
+              Stock: {stock}
             </Typography>
             {/* <Link to={`/item/${id}`}> */}
-            <Link to={`/detalle/${id}`} style={{textDecoration: 'none'}}>
+            <Link to={`/detalle/${id}`} style={{ textDecoration: "none" }}>
               <Button variant="contained" size="large" color="warning">
                 ver producto
               </Button>

@@ -1,10 +1,10 @@
 import "./Cart.css";
-import { useContext } from "react";
-import { cartContext } from "../../context/cartContext";
+import { useCartContext } from "../../context/cartContext";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Cart = ({ title, count, price, onAdd }) => {
-
-  const { cartList } = useContext(cartContext);
+const Cart = () => {
+  const { cartList, vaciarCarrito } = useCartContext();
 
   return (
     <div style={{ color: "green" }}>
@@ -12,11 +12,23 @@ const Cart = ({ title, count, price, onAdd }) => {
 
       {cartList.map((product) => (
         <li key={product.id}>
-          {product.title} | cantidad: {product.cantidad} | Precio Unitario: ${" "}
-          {product.price} | TOTAL: {product.price *  product.cantidad}
+          {product.title} | cantidad: {product.qty} | Precio Unitario: ${" "}
+          {product.price} | TOTAL: {product.price * product.qty}
         </li>
       ))}
-
+      <Button
+        variant="contained"
+        size="large"
+        color="warning"
+        onClick={vaciarCarrito}
+      >
+        Vaciar Carrito
+      </Button>
+      <Link to="/cart/Pago" style={{ textDecoration: "none" }}>
+        <Button variant="contained" size="large" color="success">
+          Proceder al pago
+        </Button>
+      </Link>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 const FormularioLogIn = () => {
+  const [formularioEnviado, setFormularioEnviado] = useState(false);
+
   const [datos, setDatos] = useState({
     nombre: "",
     apellido: "",
@@ -23,16 +25,16 @@ const FormularioLogIn = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("user: " + datos.nombre + " " + datos.apellido);
+    setFormularioEnviado(true);
   };
 
   return (
     <Fragment>
-      <h2>Formulario con Box / TextField</h2>
       <Box
         component="form"
         onSubmit={handleSubmit}
         sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
+          "& .MuiTextField-root": { mt: 10, m: 1, width: "25ch" },
         }}
         noValidate
         autoComplete="off"
@@ -81,7 +83,6 @@ const FormularioLogIn = () => {
             focused
             onChange={handleInputChange}
           />
-
         </div>
         <div>
           <Button type="submit" variant="contained" color="primary">
@@ -89,6 +90,19 @@ const FormularioLogIn = () => {
           </Button>
         </div>
       </Box>
+      {formularioEnviado && (
+        <div
+          style={{
+            margin: 1,
+            padding: 5,
+            color: "green",
+            backgroundColor: "lightblue",
+          }}
+        >
+          <h4>Te damos la bienvenida!</h4>
+          <h3>User:  {datos.nombre + " " + datos.apellido }</h3>
+        </div>
+      )}
     </Fragment>
   );
 };

@@ -32,11 +32,6 @@ const ItemDetailContainer = () => {
   return (
     <div
       className="itemDetailContainer" >
-      {/* <p
-        style={{ marginTop: "10px", marginLeft: "50px", marginRight: "50px", borderRadius: "10px", padding: "5px", color: "#000000",
-          backgroundColor: "#ff7fd4", fontWeight: "bold", }} >
-        <i>itemDetailContainer Component</i>
-      </p> */}
       <div>
         {loading && <Spinner />}
         <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems:"center"}}>

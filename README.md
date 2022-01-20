@@ -1,7 +1,9 @@
 React Js Coder House | Camada-19795
 
-Entrega desafío "Sincronizar counter".
+Entrega Desafío "CartContext"
 
+
+Entrega Desafío CartContext, implementando React Context para mantener el estado de compra del user
 
 Realizada con soporte de estilos basados en Material UI.
 
@@ -9,7 +11,7 @@ Utilización de bibliotea de formularios Formik, para el desarrollo de formulari
 
 Profesor: Federico Osandón 
 Tutor Coordinador: Eric Wajnrajch 
-Revisiones: Francisco García Méndez
+Tutor Revisiones: Francisco García Méndez
 Alumno: Guillermo Vicente 
 
 
