@@ -11,21 +11,19 @@ import {
   query,
   where,
 } from "firebase/firestore";
-//import { Button } from "@mui/material";
+
 
 const ItemListContainer = ({ user, greeting, marca }) => {
   const [products, setProducts] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
-  //párametro id de la url
   const { idCategory } = useParams();
 
   useEffect(() => {
     setLoading(true);
     if (idCategory) {
       const db = getFirestore();
-      //para query pasamos db, y la colección
       const queryCollection = query(
         collection(db, "items"),
         where("category", "==", idCategory)
@@ -66,10 +64,7 @@ const ItemListContainer = ({ user, greeting, marca }) => {
     }
   }, [idCategory]);
 
-
-
-  /*código antes de firebase, cargando los datos de la api con getProducts() y promesa
-
+  /*código de carga con async Mocks, antes de firebase
    useEffect(() => {
     setLoading(true);
     if (idCategory) {
@@ -98,8 +93,7 @@ const ItemListContainer = ({ user, greeting, marca }) => {
         });
     }
   }, [idCategory]);
-
-*/
+  */
 
   return (
     <div className="itemListContainer">

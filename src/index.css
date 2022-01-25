@@ -27,21 +27,6 @@ code {
   margin: 1em; 
 }
 
-.footerClass {
-padding: 5px;
-text-align: center;
-font-size: 1em;
-background-color: black;
-}
-
-.addressClass {
-padding: 1px;
-color: #ffffff;
-font-size: 1em;
-text-align: center;
-letter-spacing: .05em;
-}
-
 /* estilos de componente Header */
 .headerContainer {
 width: auto;
@@ -79,15 +64,6 @@ color:  #153757;
 font-size: 1em;
 font-weight: bold;
 
-}
-
-.tienda {
-margin: 10px;
-border-radius: 10px;
-padding: 20px;
-height: 20px;
-color: #ffffff;
-background-color: #15b610;
 }
 
 .navbarLinks {
@@ -150,4 +126,5 @@ text-align: center;
 margin: 5px;
 padding: 5px;
 background-color:#528be7;
+min-height: 65vh;
 }

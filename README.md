@@ -1,14 +1,18 @@
 React Js Coder House | Camada-19795
 
-Entrega Desafío "CartView"
+Entrega Desafío "Desafío: Item Collection"
 
-Expandiendo el componente Cart.jsx con el desglose de la compra, y actualizando componente CartWidget.jsx para hacerlo reactivo al contexto.
+Conectando la nueva ItemCollection de Google Firestore al ItemListContainer a través del listado de ítemse, y con ItemDetailContainer a través del detalle de ítem. Eliminación de los async mocks (promises) y reemplazos por los llamados de Firestore. 
 
 Realizada con soporte de estilos basados en Material UI.
 
+
 Profesor: Federico Osandón 
+
 Tutor Coordinador: Eric Wajnrajch 
+
 Tutor Revisiones: Francisco García Méndez
+
 Alumno: Guillermo Vicente 
 
 

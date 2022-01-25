@@ -21,7 +21,7 @@ const Nosotros = () => {
       {
         <div
           style={{
-            margin: "30px",
+            // margin: "30px",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "space-around",

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import Spinner from "../Spinner/Spinner";
-import { useParams } from "react-router-dom";
 //import getProducts from "../../helpers/mock";
+import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
@@ -13,8 +13,7 @@ const ItemDetailContainer = () => {
 
   const { idItem } = useParams();
 
-  /*código antes de firebase, cargando los datos de la api con getProduc
-
+  /*código antes de firebase
   useEffect(() => {
     setLoading(true);
       getProducts
@@ -28,10 +27,8 @@ const ItemDetailContainer = () => {
         setLoading(false);
     });
   }, [idItem]);
-
   */
 
-  // código con firebase y sus métodos para cargar los datos de la api
   useEffect(() => {
     setLoading(true);
     const db = getFirestore();

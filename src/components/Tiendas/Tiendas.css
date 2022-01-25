@@ -12,9 +12,11 @@
     border: 5px solid #ee6002;
     border-radius: 15px;
     text-align: center;
-    margin: 10px;
+    margin: 5px;
     padding: 5px;
-    background-color:#528be7;}
+    background-color:#528be7;
+    min-height: 65vh;
+}
 
 .teamListCard{
     margin: 20px;

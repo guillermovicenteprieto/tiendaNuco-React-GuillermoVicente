@@ -1,12 +1,18 @@
 .footerClass {
     text-align: center;
-    background-color: #15b610;
 }
 
 .addressClass {
     color: #ffffff;
-    font-size: 1em;
-    font-weight: 500;
+    font-size: .75em;
     text-align: center;
     letter-spacing: .05em;
+}
+
+.addressClassCursada {
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    letter-spacing: .05em;
+    padding-bottom: 1em;
 }
