@@ -7,7 +7,7 @@ const Contacto = () => {
 
   return (
     <div className="nosotrosContainer">
-      <h3 className="titleComponent">Contacto</h3>
+      <h5 className="titleComponent">Contacto</h5>
       <Formik
         //propiedades de valores iniciales
         initialValues={{
@@ -111,7 +111,7 @@ const Contacto = () => {
                 </div>
 
                 <hr />
-                <div className="Formulario">
+                {/* <div className="Formulario">
                   <h4> País </h4>
                   <Field name="pais" as="select">
                     <option value="">Seleccione un país</option>
@@ -120,7 +120,7 @@ const Contacto = () => {
                     <option value="España">España</option>
                     <option valu="Italia">Italia</option>
                   </Field>
-                </div>
+                </div> */}
                 <div>
                   <label>
                     <Field name="mensaje" as="textarea" placeholder="Mensaje" />

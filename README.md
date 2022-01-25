@@ -1,13 +1,10 @@
 React Js Coder House | Camada-19795
 
-Entrega Desafío "CartContext"
+Entrega Desafío "CartView"
 
-
-Entrega Desafío CartContext, implementando React Context para mantener el estado de compra del user
+Expandiendo el componente Cart.jsx con el desglose de la compra, y actualizando componente CartWidget.jsx para hacerlo reactivo al contexto.
 
 Realizada con soporte de estilos basados en Material UI.
-
-Utilización de bibliotea de formularios Formik, para el desarrollo de formulario en componente Contacto
 
 Profesor: Federico Osandón 
 Tutor Coordinador: Eric Wajnrajch 

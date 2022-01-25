@@ -8,11 +8,14 @@ import Tiendas from "./components/Tiendas/Tiendas";
 import Contacto from "./components/Contacto/Contacto";
 import Footer from "./components/Footer/Footer";
 import FormularioLogIn from "./components/Contacto/FormularioLogIn";
-import Pago from "./components/Cart/Pago";
+import Checkout from "./components/Cart/Checkout";
 import { CartContextProvider } from "./context/cartContext";
+import { UserContextProvider } from "./components/Contacto/FormularioLogIn";
 
 function App() {
   return (
+    <UserContextProvider>
+
     <CartContextProvider>
       <BrowserRouter>
         <div className="main">
@@ -33,7 +36,7 @@ function App() {
 
             <Route
               exact
-              path="/categorias/:idCategoria"
+              path="/category/:idCategory"
               element={
                 <ItemListContainer
                   greeting={"Piezas únicas, diseños exclusivos!"}
@@ -41,16 +44,11 @@ function App() {
               }
             />
 
-            <Route
-              exact
-              path="/detalle/:idDetalle"
-              element={<ItemDetailContainer />}
-            />
-            {/* <Route exact path="/item/:idItem" element={<ItemDetailContainer />} /> */}
+            <Route exact path="/item/:idItem" element={<ItemDetailContainer />} />
 
             <Route exact path="/cart" element={<Cart />} />
 
-            <Route exact path="/cart/Pago" element={<Pago />} />
+            <Route exact path="/checkout" element={<Checkout />} />
 
             <Route exact path="/nosotr@s" element={<Nosotros />} />
 
@@ -58,13 +56,14 @@ function App() {
 
             <Route exact path="/contacto" element={<Contacto />} />
 
-            <Route exact path="/Formulario" element={<FormularioLogIn />} />
+            <Route exact path="/formulario" element={<FormularioLogIn />} />
           </Routes>
 
           <Footer />
         </div>
       </BrowserRouter>
     </CartContextProvider>
+    </UserContextProvider>
   );
 }
 

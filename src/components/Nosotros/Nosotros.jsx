@@ -8,36 +8,38 @@ const Nosotros = () => {
   const [team, setTeam] = useState([]);
   //Trago una Api para mostrar a nuestro equipo
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=6")
+    fetch("https://randomuser.me/api/?results=9")
       .then((response) => response.json())
-      //la respuesta en formato json la guardo en setTeam
       .then((data) => setTeam(data.results));
   }, []);
 
   return (
     <div className="nosotrosContainer">
-      <h3 className="titleComponent"><i>NUCO Team: </i> nosotr@s</h3>
+      <h5 className="titleComponent">
+        <i>NUCO Team: </i> nosotr@s
+      </h5>
       {
         <div
           style={{
             margin: "30px",
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-around",          
+            justifyContent: "space-around",
           }}
         >
           {team?.map((team) => {
             const { first, last } = team.name;
             return (
               <CardContent className="teamListCard listCards">
-                <Avatar key={team.id}
+                <Avatar
+                  key={team.id}
                   className="main"
                   src={team.picture.large}
                   sx={{ width: 60, height: 60 }}
                   style={{
                     alignSelf: "center",
                     margin: "10px",
-                    justifyContent: "space-around",          
+                    justifyContent: "space-around",
                   }}
                 />
                 <Typography gutterBottom variant="p" component="div">

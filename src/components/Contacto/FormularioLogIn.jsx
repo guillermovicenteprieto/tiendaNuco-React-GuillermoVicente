@@ -1,10 +1,45 @@
-import React from "react";
-import { Fragment, useState } from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
+import React, { Fragment, useState, createContext, useContext } from "react";
+import {Box, Button, TextField} from "@mui/material";
+
+const userContext = createContext([]);
+
+export function useUserContext() {
+  return useContext(userContext);
+}
+
+export const UserContextProvider = ({ children }) => {
+  const [user, setUser] = useState({});
+
+  function setUserData(userData) {
+    setUser(userData);
+  }
+
+  return (
+    <userContext.Provider value={{ user, setUserData }}>
+      {children}
+    </userContext.Provider>
+  );
+}
+
 
 const FormularioLogIn = () => {
+
+  //ejemplo profe
+  //ver estados controlados: sincronizar la función con el estado
+
+  //renderin condicional
+  
+  // const ControlledInput = () => {
+  //   const [input, setInput] = useState({texto:''});
+  //   useEffect(() => {
+  //     console.log('suscrito');
+  //     return () => {
+  //       console.log('desuscrito');
+  //     }
+  //   }, [input]);
+  // };
+   
+
   const [formularioEnviado, setFormularioEnviado] = useState(false);
 
   const [datos, setDatos] = useState({
@@ -13,6 +48,14 @@ const FormularioLogIn = () => {
     // email: '',
     // comentario: '',
   });
+
+    // useEffect(() => {
+    //   console.log('suscrito');
+    //   return () => {
+    //     console.log('desuscrito');
+    //   }
+    // }, [datos.nombre, datos.apellido]);
+  
 
   const handleInputChange = (event) => {
     //console.log(event.target.value)
@@ -31,6 +74,7 @@ const FormularioLogIn = () => {
   return (
     <Fragment>
       <Box
+        margin="30px"
         component="form"
         onSubmit={handleSubmit}
         sx={{
@@ -99,8 +143,8 @@ const FormularioLogIn = () => {
             backgroundColor: "lightblue",
           }}
         >
-          <h4>Te damos la bienvenida!</h4>
-          <h3>User:  {datos.nombre + " " + datos.apellido }</h3>
+          <h4>Te damos la bienvenida</h4>
+          <h3>{datos.nombre + " " + datos.apellido }</h3>
         </div>
       )}
     </Fragment>

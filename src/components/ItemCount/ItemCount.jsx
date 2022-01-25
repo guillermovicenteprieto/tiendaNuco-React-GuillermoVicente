@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./ItemCount.css";
 import Cart from "../Cart/Cart";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -7,84 +6,61 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Divider } from "@mui/material";
+import "./ItemCount.css";
 
 const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const addItem = () => {
-    count < stock
-      ? setCount(count + initial)
-      : alert("Se ha alcanzado el límite de stock");
+    count < stock && setCount(count + initial);
   };
 
   const quitItem = () => {
-    count > initial
-      ? setCount(count - initial)
-      : alert("Debes tener al menos un producto seleccionado");
+    count > initial && setCount(count - initial);
   };
 
   const resetItem = () => {
     setCount(initial);
+    setShow(false);
   };
 
   const [show, setShow] = useState(false);
 
-  console.log(setShow)
-
+  
   return (
-    <div
-      key={id}
-      style={{
-        textAlign: "center",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div>
       <Grid container>
         <Box>
-          <Card
-            className="titleComponent"
-            sx={{ maxWidth: "150px" }}
-            style={{
-              borderRadius: "10px",
-              margin: "10px",
-              padding: "10px",
-              backgroundColor: "#ebf783",
-              width: "auto",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Typography variant="p" component="div">
+          <Card className="cardCount">
+            <Typography variant="p" mt="15px" mb="15px" component="div">
               Precio: $ {price}
             </Typography>
-            <Typography variant="p" component="div">
+            {/* <Typography variant="p" component="div">
               {count === 1 && <p>Stock {stock} unid.</p>}
               {count !== 1 && <p>Stock {stock - count} unid.</p>}
-            </Typography>
-
+            </Typography> */}
             <Button
               variant="contained"
-              size="medium"
-              style={{ backgroundColor: "#269e21", marginTop: "5px" }}
+              size="small"
+              style={{ backgroundColor: "#269e21" }}
               onClick={addItem}
-              disabled={count === stock}
+              disabled={stock === 0}
             >
               +
             </Button>
             <Typography
-              variant="h4"
+              variant="h5"
               mt="5px"
               mb="5px"
-              color="#d439da"
+              color="#0085FF"
               component="div"
             >
               {count}
             </Typography>
             <Button
               variant="contained"
-              size="medium"
-              style={{ backgroundColor: "#ee3102", marginBottom: "10px" }}
+              size="small"
+              style={{ backgroundColor: "#ee3102" }}
               onClick={quitItem}
               disabled={count === initial}
             >
@@ -93,7 +69,7 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
             <div>
               <Button
                 variant="contained"
-                size="medium"
+                size="small"
                 style={{
                   backgroundColor: "#0586e0",
                   marginTop: "10px",
@@ -107,7 +83,7 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
             <Divider />
 
             <Typography variant="p" mt="10px" component="div">
-              Cantidad Seleccionada: {count}
+              UNIDADES: {count}
             </Typography>
 
             <Typography variant="h6" mt="10px" component="div">
@@ -119,13 +95,12 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
               style={{
                 color: "white",
                 backgroundColor: "#0586e0",
-                marginTop: "20px",
-                marginBottom: "10px",
+                margin: "10px",
               }}
               onClick={() => onAdd(count)}
               disabled={count < 1 && "disabled"}
             >
-              Agregar al carrito
+              Agregar
             </Button>
           </Card>
         </Box>
@@ -134,13 +109,13 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
       <div>
         {show && (
           <Cart
-            title={title}
-            count={count}
-            initial={initial}
-            stock={stock}
-            price={price}
-            onAdd={onAdd}
-            id={id}
+            // title={title}
+            // count={count}
+            // initial={initial}
+            // stock={stock}
+            // price={price}
+            // onAdd={onAdd}
+            // id={id}
           />
         )}
       </div>

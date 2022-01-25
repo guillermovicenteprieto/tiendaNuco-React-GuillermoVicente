@@ -1,15 +1,12 @@
-.itemCountClass{
-  padding: 5px;
-  background-color: #95daeb;
-}
-
-.titleComponent{
-  display: block;
+.cardCount{
   margin-left: 75px;
   margin-right: 75px;
   border-radius: 10px;
-  padding: 5px;
-  background-color:#ffb7f3;
+  padding: 10px;
+  background-color: #ffa7e2;
   color: #000000;
-  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  width: auto;
 }

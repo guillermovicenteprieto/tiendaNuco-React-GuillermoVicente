@@ -1,13 +1,8 @@
 import { useState } from "react";
-import ItemCount from "../ItemCount/ItemCount";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
+import { Grid, Box, CardMedia, Typography, Button, Card } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/cartContext";
+import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ product }) => {
@@ -22,31 +17,31 @@ const ItemDetail = ({ product }) => {
   };
 
   return (
-    <div >
+    <div>
       <Grid container style={{ alignItems: "center" }}>
         <Box>
           <Card
-            sx={{ maxWidth: "300px" }}
-            style={{ borderRadius: "10px", margin: "10px", padding: "10px" }}
+            sx={{ maxWidth: "275px" }}
+            style={{ borderRadius: "10px", margin: "5px", padding: "15px" }}
           >
-            <Typography variant="h5" component="div">
-              {title} NUCO
+            <Typography variant="h5" component="div" color="#b3209a">
+              {title}
             </Typography>
             <CardMedia
               component="img"
               image={image}
               title={title}
               width="auto"
-              height="375"
+              height="250px"
               alt={title}
             />
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="body2" mt="10px">
               {description}
             </Typography>
           </Card>
         </Box>
 
-        <Box>
+        <Grid>
           {show ? (
             <ItemCount
               id={id}
@@ -59,20 +54,21 @@ const ItemDetail = ({ product }) => {
               onAdd={onAdd}
             />
           ) : (
-            <Grid container>
+            <Grid>
               <Link to="/cart" style={{ textDecoration: "none" }}>
-                <Button variant="contained" size="large" color="success">
-                  Terminar
+                <Button variant="contained" size="small" color="success">
+                  Ir al Carrito
                 </Button>
               </Link>
+              <hr />
               <Link to="/" style={{ textDecoration: "none" }}>
-                <Button variant="contained" size="large" color="warning">
+                <Button variant="contained" size="small" color="warning">
                   Seguir comprando
                 </Button>
               </Link>
             </Grid>
           )}
-        </Box>
+        </Grid>
       </Grid>
     </div>
   );

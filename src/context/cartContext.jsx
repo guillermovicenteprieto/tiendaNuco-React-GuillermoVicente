@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from "react";
 
 const cartContext = createContext([]);
 
-//función que evita importar useContext en todos los archivos a usarlo
+//función que evita importar useContext en los archivos a usarlo
 export function useCartContext() {
   return useContext(cartContext);
 }
@@ -23,19 +23,38 @@ export const CartContextProvider = ({ children }) => {
     }
   }
 
+  function removeItem(itemId) {
+    setCartList(cartList.filter((item) => item.id !== itemId));
+  }
+
+  const totalCarrito = () => {
+    let total = 0;
+    cartList.forEach((item) => {
+      total += item.price * item.qty;
+    });
+    return total;
+  };
+
   function vaciarCarrito() {
     setCartList([]);
   }
 
-  console.log(cartList);
-  console.log(cartList.length);
+  function Carrito() {
+    const totalProductsCarrito = cartList
+      .map((productsInCart) => productsInCart.qty)
+      .reduce((prev, curr) => prev + curr, 0);
+    return totalProductsCarrito;
+  }
 
   return (
     <cartContext.Provider
       value={{
         cartList,
         agregarAlCarrito,
+        removeItem,
+        valorTotalCarrito: totalCarrito(),
         vaciarCarrito,
+        Carrito,
       }}
     >
       {children}
