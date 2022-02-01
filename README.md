@@ -1,11 +1,11 @@
+[]: # Language: markdown
+[]: # Path: README.md
+
 React Js Coder House | Camada-19795
 
-Entrega Desafío "Desafío: Item Collection"
+Entrega  "Desafío: Item Collection II"
 
-Conectando la nueva ItemCollection de Google Firestore al ItemListContainer a través del listado de ítemse, y con ItemDetailContainer a través del detalle de ítem. Eliminación de los async mocks (promises) y reemplazos por los llamados de Firestore. 
-
-Realizada con soporte de estilos basados en Material UI.
-
+Conectando Firestore a la APP para escrituras. Creando colección de órdenes e insertando la orden en la colección del usuario con su id de orden auto-generada
 
 Profesor: Federico Osandón 
 
@@ -13,7 +13,7 @@ Tutor Coordinador: Eric Wajnrajch
 
 Tutor Revisiones: Francisco García Méndez
 
-Alumno: Guillermo Vicente 
+Proyecto: Guillermo Vicente 
 
 
 # Getting Started with Create React App

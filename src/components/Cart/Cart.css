@@ -17,3 +17,13 @@
     padding: 5px;
     background-color:#65b2e9;;
 }
+
+.cartDetail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: 20px;
+    color: #b3209a;
+}

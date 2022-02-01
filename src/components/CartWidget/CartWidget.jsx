@@ -1,21 +1,15 @@
-import IconButton from "@mui/material/IconButton";
-import Badge from "@mui/material/Badge";
+import {IconButton, Badge} from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useCartContext } from "../../context/cartContext";
 
 const CartWidget = () => {
-  const { Carrito } = useCartContext();
-  const cantidadCarrito = Carrito();
+  const { cartQuantity } = useCartContext();
+  // const cantidadCarrito = cartQuantity();
 
   return (
     <div>
-      <IconButton
-        aria-label="cart"
-        aria-controls="primary-search-account-menu"
-        aria-haspopup="true"
-        color="secondary"
-      >
-        <Badge badgeContent={cantidadCarrito} color="warning">
+      <IconButton color="secondary">
+        <Badge badgeContent={cartQuantity()} color="warning">
           <ShoppingCartIcon />
         </Badge>
       </IconButton>

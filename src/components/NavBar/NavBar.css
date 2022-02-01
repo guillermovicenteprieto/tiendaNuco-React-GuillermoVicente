@@ -8,11 +8,18 @@
     border-left: solid 3px #0586e0;
     border-radius: .5em;
     margin: 1em; 
-    /* otros colores
-    #0586e0;
-    #269e21;
-    #50c54c 
-    15b610*/
+}
+
+.logoOjos {
+    width: 5em;
+    padding: 1px;
+    display: inline-block;
+    border-top: solid 2px #0586e0;
+    border-right: solid 2px #0586e0;
+    border-bottom: solid 2px #0586e0;
+    border-left: solid 2px #0586e0;
+    border-radius: .35em;
+    margin: 1em; 
 }
 
 navbarLinksActive{

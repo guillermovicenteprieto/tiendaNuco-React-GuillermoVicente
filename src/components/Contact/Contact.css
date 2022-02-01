@@ -5,7 +5,7 @@
     justify-content: center;
     }
     
-    .formulario {
+    .formContact {
     min-width: auto;
     margin-top: 50px;
     margin: 10px;
@@ -15,12 +15,12 @@
     padding: 10px;
     }
     
-    .formulario > div {
+    .formContact > div {
     margin-top: 20px;
     margin-bottom: 20px;
     }
     
-    .formulario label {
+    .formContact label {
     display: flex;
     font-weight: 600;
     font-size: 14px;
@@ -30,8 +30,8 @@
     justify-content: center;
     }
     
-    .formulario input,
-    .formulario textarea {
+    .formContact input,
+    .formContact textarea {
     font-family: 'Open Sans', sans-serif;
     width: 80%;
     border-radius: 5px;
@@ -43,18 +43,18 @@
     color: #1f1f1f;
     }
     
-    .formulario input:focus {
+    .formContact input:focus {
     outline: none;
     border: 2px solid #0085FF;
     }
     
-    .formulario .error {
+    .formContact .error {
     color: #2e1617;
     font-weight: 600;
     font-size: 12px;
     }
     
-    .formulario button[type="submit"] {
+    .formContact button[type="submit"] {
     display: block;
     background: #ff7fd4;
     font-weight: 600;
@@ -69,11 +69,11 @@
     transition: .3s ease all;
     }
     
-    .formulario button[type="submit"]:hover {
+    .formContact button[type="submit"]:hover {
     background: #ee6002;
     }
     
-    .formulario .exito {
+    .formContact .exito {
     text-align: center;
     font-size: 14px;
     padding-top: 20px;
@@ -81,8 +81,14 @@
     color: #15b610;
     }
     
-    .formulario input[type="radio"] {
+    .formContact input[type="radio"] {
     width: auto;
     margin-right: 10px;
     }
-    
+
+.cardContact {
+    margin: 1px;
+    padding: 5px;
+    color: #15b610;
+    background-color: lightblue;
+}

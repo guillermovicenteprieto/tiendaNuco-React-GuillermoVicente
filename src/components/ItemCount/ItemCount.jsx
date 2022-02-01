@@ -1,14 +1,9 @@
 import { useState } from "react";
 import Cart from "../Cart/Cart";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import { Divider } from "@mui/material";
+import { Button, Typography, Card, Grid, Box, Divider } from "@mui/material";
 import "./ItemCount.css";
 
-const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
+const ItemCount = ({ initial, stock, price, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const addItem = () => {
@@ -26,19 +21,15 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
 
   const [show, setShow] = useState(false);
 
-  
   return (
     <div>
       <Grid container>
         <Box>
           <Card className="cardCount">
-            <Typography variant="p" mt="15px" mb="15px" component="div">
+            <Typography variant="p" component="div">
               Precio: $ {price}
             </Typography>
-            {/* <Typography variant="p" component="div">
-              {count === 1 && <p>Stock {stock} unid.</p>}
-              {count !== 1 && <p>Stock {stock - count} unid.</p>}
-            </Typography> */}
+
             <Button
               variant="contained"
               size="small"
@@ -105,20 +96,7 @@ const ItemCount = ({ id, title, initial, stock, price, onAdd }) => {
           </Card>
         </Box>
       </Grid>
-
-      <div>
-        {show && (
-          <Cart
-            // title={title}
-            // count={count}
-            // initial={initial}
-            // stock={stock}
-            // price={price}
-            // onAdd={onAdd}
-            // id={id}
-          />
-        )}
-      </div>
+      <div>{show && <Cart />}</div>
     </div>
   );
 };

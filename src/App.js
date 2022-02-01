@@ -3,19 +3,16 @@ import NavBar from "./components/NavBar/NavBar";
 import Cart from "./components/Cart/Cart";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import Nosotros from "./components/Nosotros/Nosotros";
-import Tiendas from "./components/Tiendas/Tiendas";
-import Contacto from "./components/Contacto/Contacto";
+import NucoTeam from "./components/NucoTeam/NucoTeam";
+import Stores from "./components/Stores/Stores";
+import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import FormularioLogIn from "./components/Contacto/FormularioLogIn";
-import Checkout from "./components/Cart/Checkout";
+import CheckoutSale from "./components/Cart/CheckoutSale";
+//import PayForm from "./components/Cart/PayForm";
 import { CartContextProvider } from "./context/cartContext";
-import { UserContextProvider } from "./components/Contacto/FormularioLogIn";
 
 function App() {
   return (
-    <UserContextProvider>
-
     <CartContextProvider>
       <BrowserRouter>
         <div className="main">
@@ -27,9 +24,7 @@ function App() {
               path="/"
               element={
                 <ItemListContainer
-                  user={"Hola!"}
                   greeting={"Te damos la bienvenida a nuestra tienda online."}
-                  marca={"NUCO, arte ilustrado!"}
                 />
               }
             />
@@ -48,22 +43,22 @@ function App() {
 
             <Route exact path="/cart" element={<Cart />} />
 
-            <Route exact path="/checkout" element={<Checkout />} />
+            <Route exact path="/checkoutSale" element={<CheckoutSale />} />
 
-            <Route exact path="/nosotr@s" element={<Nosotros />} />
+            <Route exact path="/nucoTeam" element={<NucoTeam />} />
 
-            <Route exact path="/tiendas" element={<Tiendas />} />
+            <Route exact path="/stores" element={<Stores />} />
 
-            <Route exact path="/contacto" element={<Contacto />} />
+            {/* <Route exact path="/payForm" element={<PayForm />} /> */}
 
-            <Route exact path="/formulario" element={<FormularioLogIn />} />
+            <Route exact path="/contact" element={<Contact />} />
+
           </Routes>
 
           <Footer />
         </div>
       </BrowserRouter>
     </CartContextProvider>
-    </UserContextProvider>
   );
 }
 

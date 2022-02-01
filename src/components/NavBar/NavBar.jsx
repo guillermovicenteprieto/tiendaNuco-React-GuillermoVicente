@@ -1,71 +1,27 @@
 import * as React from "react";
-//import AppBar from "@mui/material/AppBar";
-import {AppBar, Box, Toolbar, IconButton, Menu, MenuItem} from "@mui/material";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Menu,
+  MenuItem,
+  Typography,
+} from "@mui/material";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/cartContext";
 import "./NavBar.css";
 
-//para incorporar barra búsqueda
-// import { styled, alpha } from "@mui/material/styles";
-// import InputBase from "@mui/material/InputBase";
-// import SearchIcon from "@mui/icons-material/Search";
-
-// const Search = styled("div")(({ theme }) => ({
-//   position: "relative",
-//   borderRadius: theme.shape.borderRadius,
-//   backgroundColor: alpha(theme.palette.common.white, 0.15),
-//   "&:hover": {
-//     backgroundColor: alpha(theme.palette.common.white, 0.25),
-//   },
-//   marginRight: theme.spacing(2),
-//   marginLeft: 0,
-//   width: "100%",
-//   [theme.breakpoints.up("sm")]: {
-//     marginLeft: theme.spacing(3),
-//     width: "auto",
-//   },
-// }));
-
-// const SearchIconWrapper = styled("div")(({ theme }) => ({
-//   padding: theme.spacing(0, 2),
-//   height: "100%",
-//   position: "absolute",
-//   pointerEvents: "none",
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
-// }));
-
-// const StyledInputBase = styled(InputBase)(({ theme }) => ({
-//   color: "inherit",
-//   "& .MuiInputBase-input": {
-//     padding: theme.spacing(1, 1, 1, 0),
-//     // vertical padding + font size from searchIcon
-//     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-//     transition: theme.transitions.create("width"),
-//     width: "100%",
-//     [theme.breakpoints.up("md")]: {
-//       width: "20ch",
-//     },
-//   },
-// }));
-
 const NavBar = () => {
-  const { Carrito } = useCartContext();
-  const cantidadCarrito = Carrito();
+  const { cartQuantity } = useCartContext();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -96,18 +52,7 @@ const NavBar = () => {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-    >
-      <MenuItem>
-        <Link to="/formulario" className="navbarCuenta">
-          {" "}
-          LOG IN{" "}
-        </Link>
-        {/* <Link to="/perfil" className="navbarCuenta">
-          {" "}
-          CUENTA{" "}
-        </Link> */}
-      </MenuItem>
-    </Menu>
+    ></Menu>
   );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -145,15 +90,15 @@ const NavBar = () => {
           {" "}
           Textil{" "}
         </Link>
-        <Link to="/tiendas" className="navbarLinks">
+        <Link to="/stores" className="navbarLinks">
           {" "}
           TIENDAS{" "}
         </Link>
-        <Link to="/nosotr@s" className="navbarLinks">
+        <Link to="/nucoTeam" className="navbarLinks">
           {" "}
           NOSOTR@S{" "}
         </Link>
-        <Link to="/contacto" className="navbarLinks">
+        <Link to="/contact" className="navbarLinks">
           {" "}
           CONTACTO{" "}
         </Link>
@@ -173,61 +118,31 @@ const NavBar = () => {
               alt="NUCO arte ilustrado"
             />
           </Link>
-
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              color="primary"
-              placeholder="Buscar producto…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search> */}
+          <Typography>
+            <i> arte ilustrado!</i>
+          </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
           <Link to="/cart">
-            <IconButton
-              size="large"
-              aria-label="cantidadCarrito"
-              color="inherit"
-            >
-              {cantidadCarrito ? <CartWidget /> : null}
-            </IconButton>
+            <IconButton>{cartQuantity ? <CartWidget /> : null}</IconButton>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
-          <IconButton
-            size="large"
-            edge="end"
-            aria-label="account of current user"
-            aria-controls={menuId}
-            aria-haspopup="true"
-            onClick={handleProfileMenuOpen}
-            color="inherit"
-            style={{ margin: 5 }}
-          >
-            <AccountCircle />
-          </IconButton>
 
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <MenuItem>
               <Link to="/category/Textil" className="navbarLinksCat">
                 TEXTIL
               </Link>
-
               <Link to="/category/Cerámica" className="navbarLinksCat">
                 CERAMICA
               </Link>
-
-              <Link to="/nosotr@s" className="navbarLinks">
+              <Link to="/nucoTeam" className="navbarLinks">
                 NOSOTR@S
               </Link>
-
-              <Link to="/tiendas" className="navbarLinks">
+              <Link to="/stores" className="navbarLinks">
                 TIENDAS
               </Link>
-
-              <Link to="/contacto" className="navbarLinks">
+              <Link to="/contact" className="navbarLinks">
                 CONTACTO
               </Link>
             </MenuItem>

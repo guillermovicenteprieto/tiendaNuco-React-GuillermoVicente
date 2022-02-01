@@ -10,13 +10,12 @@ export function useCartContext() {
 export const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
 
-  function agregarAlCarrito(items) {
+  function addToCart(items) {
     setCartList([...cartList, items]);
-    const itemAgregado = cartList.findIndex((index) => index.id === items.id);
-
-    if (itemAgregado > -1) {
-      const oldQty = cartList[itemAgregado].qty;
-      cartList.splice(itemAgregado, 1);
+    const addedItem = cartList.findIndex((index) => index.id === items.id);
+    if (addedItem > -1) {
+      const oldQty = cartList[addedItem].qty;
+      cartList.splice(addedItem, 1);
       setCartList([...cartList, { ...items, qty: items.qty + oldQty }]);
     } else {
       setCartList([...cartList, { ...items, qty: items.qty }]);
@@ -27,34 +26,40 @@ export const CartContextProvider = ({ children }) => {
     setCartList(cartList.filter((item) => item.id !== itemId));
   }
 
-  const totalCarrito = () => {
-    let total = 0;
+  // function searchItem(itemTitle) {
+  //   setCartList(cartList.filter((item) => item.title === itemTitle));
+  // }
+
+  const totalCartValue = () => {
+    let cartValue = 0;
     cartList.forEach((item) => {
-      total += item.price * item.qty;
+      cartValue += item.price * item.qty;
     });
-    return total;
+    return cartValue;
   };
 
-  function vaciarCarrito() {
+    
+  function emptyCart() {
     setCartList([]);
   }
 
-  function Carrito() {
-    const totalProductsCarrito = cartList
+  function cartQuantity() {
+    const totalProductsinCart = cartList
       .map((productsInCart) => productsInCart.qty)
       .reduce((prev, curr) => prev + curr, 0);
-    return totalProductsCarrito;
+    return totalProductsinCart;
   }
 
   return (
     <cartContext.Provider
       value={{
         cartList,
-        agregarAlCarrito,
+        addToCart,
         removeItem,
-        valorTotalCarrito: totalCarrito(),
-        vaciarCarrito,
-        Carrito,
+        totalCartValue,
+        emptyCart,
+        cartQuantity,
+        //searchItem,
       }}
     >
       {children}

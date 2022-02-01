@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { Avatar } from "@mui/material";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import "./Nosotros.css";
+import { Avatar, CardContent, Typography } from "@mui/material";
+import "./NucoTeam.css";
 
-const Nosotros = () => {
+const NucoTeam = () => {
   const [team, setTeam] = useState([]);
-  //Trago una Api para mostrar a nuestro equipo
+  //Incorporo una Api para mostrar nuestro equipo: NucoTeam
   useEffect(() => {
     fetch("https://randomuser.me/api/?results=9")
       .then((response) => response.json())
@@ -14,33 +12,20 @@ const Nosotros = () => {
   }, []);
 
   return (
-    <div className="nosotrosContainer">
+    <div className="nucoTeamContainer">
       <h5 className="titleComponent">
         <i>NUCO Team: </i> nosotr@s
       </h5>
       {
-        <div
-          style={{
-            // margin: "30px",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-around",
-          }}
-        >
+        <div className="styleContainer">
           {team?.map((team) => {
             const { first, last } = team.name;
             return (
               <CardContent className="teamListCard listCards">
                 <Avatar
                   key={team.id}
-                  className="main"
                   src={team.picture.large}
-                  sx={{ width: 60, height: 60 }}
-                  style={{
-                    alignSelf: "center",
-                    margin: "10px",
-                    justifyContent: "space-around",
-                  }}
+                  sx={{ alignItems: "center", justifyContent: "center", width: 80, height: 80 }}
                 />
                 <Typography gutterBottom variant="p" component="div">
                   {first} {last}
@@ -54,4 +39,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default NucoTeam;

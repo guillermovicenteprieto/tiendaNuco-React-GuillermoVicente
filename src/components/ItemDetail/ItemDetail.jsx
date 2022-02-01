@@ -8,22 +8,19 @@ import "./ItemDetail.css";
 const ItemDetail = ({ product }) => {
   const { id, title, image, stock, price, description, category, count } =
     product;
-  const { agregarAlCarrito } = useCartContext();
+  const { addToCart } = useCartContext();
   const [show, setShow] = useState(true);
 
   const onAdd = (count) => {
     setShow(false);
-    agregarAlCarrito({ ...product, qty: count });
+    addToCart({ ...product, qty: count });
   };
 
   return (
     <div>
-      <Grid container style={{ alignItems: "center" }}>
+      <Grid container className="gridCardItemDetail">
         <Box>
-          <Card
-            sx={{ maxWidth: "275px" }}
-            style={{ borderRadius: "10px", margin: "5px", padding: "15px" }}
-          >
+          <Card className="cardItemDetail">
             <Typography variant="h5" component="div" color="#b3209a">
               {title}
             </Typography>

@@ -1,13 +1,10 @@
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import "./Item.css";
+import { CardMedia, Typography, Button, Card, Grid, Box } from "@mui/material";
 import { Link } from "react-router-dom";
+import "./Item.css";
 
-const Item = ({ id, title, image, stock, price, category }) => {
+const Item = ({ product }) => {
+  const { id, title, image, price, category } =
+    product;
 
   return (
     <div key={id} className="itemContainer">
@@ -31,14 +28,16 @@ const Item = ({ id, title, image, stock, price, category }) => {
             <Typography variant="subtitle1" component="div">
               Precio $ {price}
             </Typography>
-
-            {/* <Typography variant="subtitle1" color="primary" component="div">
-              Stock: {stock}
-            </Typography> */}
-
-            {/* <Link to={`/item/${id}`}> */}
-            <Link to={`/item/${id}`} style={{ textDecoration: "none", margin: "10px" }}>
-              <Button variant="contained" size="large" color="warning" style={{ margin: "10px" }}>   
+            <Link
+              to={`/item/${id}`}
+              style={{ textDecoration: "none", margin: "10px" }}
+            >
+              <Button
+                variant="contained"
+                size="large"
+                color="warning"
+                style={{ margin: "10px" }}
+              >
                 ver producto
               </Button>
             </Link>

@@ -109,10 +109,11 @@ background-color: #528be7 ;
 color: #e6ccde;
 }
 
+
 .itemDetailContainer{
 text-align: center;
 border-radius: 10px;
-margin: 5px;
+margin: 10px;
 padding: 5px;
 background-color: #b7d8e7;
 border: solid 5px #0085FF;
@@ -127,4 +128,41 @@ margin: 5px;
 padding: 5px;
 background-color:#528be7;
 min-height: 65vh;
+align-items: center;
+}
+
+/* estilos de componente  ItemDetailContainer */
+.styleContainer{
+  margin: auto;
+  /* padding: 30px; */
+  margin-top: 3rem;
+  /* background-color: #ff7fd4; */
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.styleDetailContainer{
+  background-color: #ff7fd4;
+  border-radius: 15px;
+  margin: 5px;
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*estilos de componente ItemDetail */
+.gridCardItemDetail{
+  align-items: center;
+}
+.cardItemDetail{
+  align-items: center;
+  border: solid 5px #e7cc2f;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
+  max-width: 275px;
 }
