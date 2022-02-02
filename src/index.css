@@ -134,9 +134,7 @@ align-items: center;
 /* estilos de componente  ItemDetailContainer */
 .styleContainer{
   margin: auto;
-  /* padding: 30px; */
   margin-top: 3rem;
-  /* background-color: #ff7fd4; */
   border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -144,7 +142,6 @@ align-items: center;
   align-items: center;
 }
 .styleDetailContainer{
-  background-color: #ff7fd4;
   border-radius: 15px;
   margin: 5px;
   margin-top: 6rem;

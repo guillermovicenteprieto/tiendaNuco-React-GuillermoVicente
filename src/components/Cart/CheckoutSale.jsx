@@ -51,7 +51,6 @@ const CheckoutSale = ({ orderId, dataForm, order, cartList }) => {
                   <h6>Cantidad: {qty}</h6>
                   <h6>Producto Nº: {cartItem.id}</h6>
                 </div>
-                <hr />
               </div>
             );
           })}
