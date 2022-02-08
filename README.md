@@ -2,24 +2,29 @@
 
 ### E-COMMERCE PROJECT
 
+#### Aplicación:
 [Tienda NUCO](https://tiendanuco.netlify.app/)
 
-### Proyecto e-Commerce desarrollado en React.js para entrega de proyecto CODER HOUSE
+### Proyecto e-Commerce desarrollado en React.js para entrega de proyecto en CODER HOUSE
 
 **React Js Coder House | Camada-19795**
+
 **Profesor: Federico Osandón** 
+
 **Tutor Coordinador: Eric Wajnrajch** 
+
 **Tutor Revisiones: Francisco García Méndez**
+
 **Proyecto: Guillermo Vicente**
 
 > Este proyecto fue creado con 
->[Create React App] (https://github.com/facebook/create-react-app)
+>[https://create-react-app.dev/] (https://github.com/facebook/create-react-app)
 
 ### [reactjs](https://reactjs.org/)
 
 React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre.
 
-#### Tecnologías: Plataformas y bibliotecas utilizadas
+### Tecnologías: Plataformas y bibliotecas utilizadas
 
 #### [nodejs](https://nodejs.org/es/)
 
@@ -84,3 +89,5 @@ dependencies: {
     #### npm start
     http://localhost:3000/
 
+#### Demo:
+[Tienda NUCO Demo](https://drive.google.com/file/d/1RizIb8zqHcSzC92TT4guRtEY0SPRdB2q/view?usp=sharing)
