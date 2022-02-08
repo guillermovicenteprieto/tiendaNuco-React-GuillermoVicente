@@ -1,51 +1,16 @@
-body {
+body{
   margin: 0;
+  font-family: Roboto;
 }
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  margin: 0;
+  font-family: Roboto;
 }
-
-.main {
-  text-align: center;
-  color: #ffffff;
-  height: 100vh;
+.checkout {
+  font-family: Roboto;
+  color: #1e3842;
 }
-
-
-/*LOGO*/
-.logoPrincipal {
-  width: 10em;
-  padding: 1px;
-  display: inline-block;
-  border-top: solid 3px #0586e0;
-  border-right: solid 3px #0586e0;
-  border-bottom: solid 3px #0586e0;
-  border-left: solid 3px #0586e0;
-  border-radius: .5em;
-  margin: 1em; 
-}
-
-/* estilos de componente Header */
-.headerContainer {
-width: auto;
-margin: 10px;
-height: 50px;
-background-color: #ff7fd4;
-border: 5px solid #15b610;
-border-radius: 10px;
-}
-
-.headerTitle {
-width: auto;
-margin: 10px;
-color: #ffffff;
-background-color: #e7cc2f;
-border: 5px solid #ee6002;
-border-radius: 10px;
-}
-
+/* estilos de componente Navbar */
 .navbarContainer {
 width: auto;
 margin:auto;
@@ -56,16 +21,13 @@ justify-content: space-around;
 align-items: center;
 font-size: 1em;
 font-weight: bold;
-
 }
 .navbarContainerLink{
 text-decoration: none;
 color:  #153757;
 font-size: 1em;
 font-weight: bold;
-
 }
-
 .navbarLinks {
 margin: 5px;
 padding: 5px;
@@ -79,34 +41,142 @@ font-size: .75em;
 letter-spacing: .05em;
 }
 
-.navbarCuenta {
-margin:7px;
-padding: 5px;
-color: #ffffff; 
-background-color: #269e21;
-text-decoration: none;
-list-style-type: none; 
-border-radius: 5px;
-font-weight: bold;
-font-size: 10px;
+.logoPrincipal {
+  width: 10em;
+  padding: 1px;
+  display: inline-block;
+  border-top: solid 3px #0586e0;
+  border-right: solid 3px #0586e0;
+  border-bottom: solid 3px #0586e0;
+  border-left: solid 3px #0586e0;
+  border-radius: .5em;
+  margin: 1em; 
 }
 
-.titleComponent{
+.logoOjos {
+  width: 5em;
+  padding: 1px;
+  display: inline-block;
+  border-top: solid 2px #0586e0;
+  border-right: solid 2px #0586e0;
+  border-bottom: solid 2px #0586e0;
+  border-left: solid 2px #0586e0;
+  border-radius: .35em;
+  margin: 1em; 
+}
+
+navbarLinksActive{
+  background-color: #0586e0;
+  color: white;
+}
+
+.navbarLinksCat {
+  margin: 5px;
+  padding: 5px;
+  color: #ffffff; 
+  background-color: #d439da;
+  text-decoration: none;
+  list-style-type: none; 
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: .8em;
+  letter-spacing: .05em;
+}
+
+.navbarCuenta {
+  margin:7px;
+  padding: 5px;
+  color: #ffffff; 
+  background-color: #269e21;
+  text-decoration: none;
+  list-style-type: none; 
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.navbarResponsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  font-family: roboto;
+}
+
+/* estilos de componentes Store y Team*/
+.listCardStore {
+  padding: 1em;
+  width: 350px;
+  height: 300px;
+  background-color: #fefaff;
+  text-decoration: none;
+  border: 5px solid #ae00ff;
+  border-radius: 15px;
+  text-align: center;
+}  
+
+.titleStoresComponent{
   border-radius: 10px;
   border : solid 5px #e7cc2f;
   padding: 5px;
   color: #000000;
   background-color: #15b610;
   font-weight: bold;
-  margin: 10px;
 }
 
+.storesContainer{
+  text-decoration: none;
+  border: 5px solid #ee6002;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color:#528be7;
+  min-height: 65vh;
+}
+
+.storeListCard{
+  margin:15px;
+  background-color: #e7cc2f ;
+  color: #1e3842;
+}
+
+.titleTeamComponent{
+  border-radius: 10px;
+  border : solid 5px #e7cc2f;
+  padding: 5px;
+  color: #000000;
+  background-color: #15b610;
+  font-weight: bold;
+}
+
+.nucoTeamContainer{
+  text-decoration: none;
+  border: 5px solid #ee6002;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color:#528be7;
+  min-height: 65vh;
+}
+
+.listCards {
+  width: 350px;
+  height: 320px;
+  text-decoration: none;
+  border: 5px solid #ae00ff;
+  border-radius: 15px;
+  text-align: center;
+   margin: 10px;
+  padding: 5px; 
+  background-color:#15b610; 
+}  
+
 .teamListCard{
-margin: 20px;
-margin-left: 75px;
-margin-right: 75px;
-background-color: #528be7 ;
-color: #e6ccde;
+  margin:15px;
+  background-color: #e7cc2f ;
+  color: #1e3842;
 }
 
 
@@ -116,25 +186,13 @@ border-radius: 10px;
 margin: 10px;
 padding: 5px;
 background-color: #b7d8e7;
-border: solid 5px #0085FF;
-}
-
-.itemListContainer{
-text-decoration: none;
-border: 5px solid #ee6002;
-border-radius: 15px;
-text-align: center;
-margin: 5px;
-padding: 5px;
-background-color:#528be7;
-min-height: 65vh;
-align-items: center;
+border: solid 5px #e7cc2f;
 }
 
 /* estilos de componente  ItemDetailContainer */
 .styleContainer{
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
   border-radius: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -144,7 +202,6 @@ align-items: center;
 .styleDetailContainer{
   border-radius: 15px;
   margin: 5px;
-  margin-top: 6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -153,13 +210,180 @@ align-items: center;
 
 /*estilos de componente ItemDetail */
 .gridCardItemDetail{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
 }
 .cardItemDetail{
-  align-items: center;
+  max-width: 350px;
+  border-radius: 10px;
   border: solid 5px #e7cc2f;
-  border-radius: 15px;
-  margin: 5px;
+  margin: 30px;
   padding: 10px;
-  max-width: 275px;
+  background-color:#ffe7f0b2;
+  color: #b3209a;
 }
+
+/*estilos de componente ListContainer */
+.itemListContainer{
+  text-decoration: none;
+  border: 5px solid #ee6002;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color:#528be7;
+  min-height: 65vh;
+  align-items: center;
+  }
+  
+.titleComponent{
+    border-radius: 10px;
+    border : solid 5px #e7cc2f;
+    padding: 5px;
+    color: #000000;
+    background-color: #15b610;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.titleCartComponent{
+  border-radius: 10px;
+  border : solid 5px #e7cc2f;
+  padding: 5px;
+  color: #000000;
+  background-color: #15b610;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.list-container{
+  color:#000000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartListContainer{
+  text-decoration: none;
+  border: 5px solid #ee6002;
+  border-radius: 15px;
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  background-color:#528be7;
+  min-height: 65vh;
+  align-items: center;
+  }
+
+  .cartDetail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #b3209a;
+}
+
+.cartImage{
+  border-radius: 50%;
+  border: solid 3px #b3209a;
+  width: 80px;
+  height: 80px;
+}
+
+.listCardsCheckout {
+  display: inline-block;
+  width: 250px;
+  border: 5px solid #ae00ff;
+  border-radius: 15px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px; 
+  background-color:#15b610; 
+}  
+
+.itemCard{
+  border-radius: 10px;
+  max-width: 250px;
+}
+
+.itemCard img{
+  height: 250px;
+}
+
+.cardCount{
+  border-radius: 10px;
+  border: solid 5px #e7cc2f;
+  padding: 10px;
+  background-color: #ffe7f0b2;
+  color: #000000;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  width: 250px;
+}
+
+.contenedorForm {
+  min-height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  }
+   
+  .formBuy > div {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  }
+  
+  .formBuy label {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  color: #1f1f1f;
+  align-items: flex-start;
+  justify-content: center;
+  }
+  
+  .formBuy input,
+  .formBuy textarea {
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  border-radius: 5px;
+  border: 2px solid #0586e0;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px;
+  color: #1f1f1f;
+  }
+  
+  .formBuy input:focus {
+  outline: none;
+  border: 5px solid #15b610;
+  }
+  
+  .formBuy .error {
+  color: #ae00ff;
+  font-weight: 500;
+  font-size: 12px;
+  }
+  
+  .formBuy button[type="submit"] {
+  display: block;
+  background: #ff7fd4;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  transition: .3s ease all;
+  }
+  
+  .formContact button[type="submit"]:hover {
+  background: #ee6002;
+  }
+  

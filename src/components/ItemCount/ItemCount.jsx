@@ -1,9 +1,8 @@
 import { useState } from "react";
-import Cart from "../Cart/Cart";
-import { Button, Typography, Card, Grid, Box, Divider } from "@mui/material";
+import { Button, Typography,Grid, Box, Divider } from "@mui/material";
 import "./ItemCount.css";
 
-const ItemCount = ({ initial, stock, price, onAdd }) => {
+const ItemCount = ({ initial, stock, price, onAdd, category }) => {
   const [count, setCount] = useState(initial);
 
   const addItem = () => {
@@ -16,17 +15,17 @@ const ItemCount = ({ initial, stock, price, onAdd }) => {
 
   const resetItem = () => {
     setCount(initial);
-    setShow(false);
   };
 
-  const [show, setShow] = useState(false);
-
-  return (
+    return (
     <div>
-      <Grid container>
+      <Grid>
         <Box>
-          <Card className="cardCount">
-            <Typography variant="p" component="div">
+          <Box className="cardCount">
+            <Typography variant="h6" mt="5px" mb="10px" component="div">
+              NUCO {category}
+            </Typography>
+            <Typography variant="p" mt="5px" mb="10px" component="div">
               Precio: $ {price}
             </Typography>
 
@@ -57,7 +56,7 @@ const ItemCount = ({ initial, stock, price, onAdd }) => {
             >
               -
             </Button>
-            <div>
+            <Box>
               <Button
                 variant="contained"
                 size="small"
@@ -70,7 +69,7 @@ const ItemCount = ({ initial, stock, price, onAdd }) => {
               >
                 Reset
               </Button>
-            </div>
+            </Box>
             <Divider />
 
             <Typography variant="p" mt="10px" component="div">
@@ -93,10 +92,9 @@ const ItemCount = ({ initial, stock, price, onAdd }) => {
             >
               Agregar
             </Button>
-          </Card>
+          </Box>
         </Box>
       </Grid>
-      <div>{show && <Cart />}</div>
     </div>
   );
 };

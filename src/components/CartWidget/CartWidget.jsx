@@ -4,8 +4,6 @@ import { useCartContext } from "../../context/cartContext";
 
 const CartWidget = () => {
   const { cartQuantity } = useCartContext();
-  // const cantidadCarrito = cartQuantity();
-
   return (
     <div>
       <IconButton color="secondary">

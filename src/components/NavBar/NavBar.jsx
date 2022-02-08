@@ -12,7 +12,6 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/cartContext";
-import "./NavBar.css";
 
 const NavBar = () => {
   const { cartQuantity } = useCartContext();
@@ -70,18 +69,8 @@ const NavBar = () => {
         horizontal: "right",
       }}
       open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "end",
-          backgroundColor: "transparent",
-          marginTop: 0.5,
-          padding: 0.5,
-        }}
-      >
+      onClose={handleMobileMenuClose} >
+      <div className="navbarResponsive ">
         <Link to="category/Cerámica" className="navbarLinksCat">
           {" "}
           Cerámica{" "}

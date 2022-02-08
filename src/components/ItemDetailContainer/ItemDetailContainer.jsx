@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
   const { idItem } = useParams();
 
-    useEffect(() => {
+  useEffect(() => {
     setLoading(true);
     const db = getFirestore();
     const queryProduct = doc(db, "items", idItem);
@@ -19,13 +19,15 @@ const ItemDetailContainer = () => {
         setProduct({ id: res.id, ...res.data() });
       })
       .catch((error) => {
-        console.log("Error en carga de promesa en ItemDetailContainer.jsx", error);
+        console.log(
+          "Error en carga de promesa en ItemDetailContainer.jsx",
+          error
+        );
       })
       .finally(() => {
         setLoading(false);
       });
   }, [idItem]);
- 
 
   return (
     <div className="itemListContainer">

@@ -1,89 +1,84 @@
-[]: # Language: markdown
-[]: # Path: README.md
+## Tienda NUCO
 
-React Js Coder House | Camada-19795
+### Proyecto e-Commerce desarrollado en React.js para entrega de proyecto CODER HOUSE
 
-Entrega  "Desafío: Item Collection II"
-
-Conectando Firestore a la APP para escrituras. Creando colección de órdenes e insertando la orden en la colección del usuario con su id de orden auto-generada
-
-Profesor: Federico Osandón 
-
-Tutor Coordinador: Eric Wajnrajch 
-
-Tutor Revisiones: Francisco García Méndez
-
-Proyecto: Guillermo Vicente 
+> React Js Coder House | Camada-19795
+> Profesor: Federico Osandón 
+> Tutor Coordinador: Eric Wajnrajch 
+> Tutor Revisiones: Francisco García Méndez
+> Proyecto: Guillermo Vicente 
 
 
-# Getting Started with Create React App
+This project was created with [Create React App] (https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[reactjs](https://reactjs.org/)
 
-## Available Scripts
+React es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página. Es mantenido por Facebook y la comunidad de software libre.
 
-In the project directory, you can run:
+#### Tecnologías: Plataformas y bibliotecas utilizadas
 
-### `npm start`
+[nodejs](https://nodejs.org/es/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[npm](https://www.npmjs.com/)
 
-### `npm test`
+npm responde a las siglas de Node Package Manager o manejador de paquetes de node, es la herramienta por defecto de JavaScript para la tarea de compartir e instalar paquetes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[react-router](https://reacttraining.com/react-router/web/guides/quick-start)
 
-### `npm run build`
+React Router es una biblioteca de enrutamiento del lado del servidor y del cliente con todas las funciones para React, una biblioteca de JavaScript para crear interfaces de usuario. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Material UI](https://mui.com/ "Material UI")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+MUI proporciona una biblioteca robusta, personalizable y accesible de componentes fundamentales y avanzados, lo que le permite crear su propio sistema de diseño y desarrollar aplicaciones React más rápido.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+[Material UI icons](https://mui.com/components/icons/#material-icons "Material UI icons")
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Biblioteca de íconos de MUI, Material UI.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Formik](https://formik.org/ "Formik")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Formik es una biblioteca declarativa, intuitiva y adaptable desarrollada para gestión de formularios  de código abierto para React y React Nativ
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Firebase](https://firebase.google.com/ "Firebase")
 
-## Learn More
+Firebase es una plataforma ubicada en la nube, integrada con Google Cloud Platform, que usa un conjunto de herramientas multiplataforma para la creación y sincronización de proyectos. de fácil integración para plataformas web y móviles.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Se incorporaron API para simulación de equipo de trabajos y tiendas.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[randomuser](https://randomuser.me/)
+Una API gratuita y de código abierto para generar datos de usuario aleatorios. Como Lorem Ipsum, pero para las personas.
+[jsonplaceholder] (https://jsonplaceholder.typicode.com)
+API falsa gratuita para pruebas y prototipos.
+Con tecnología de servidor JSON + LowDB
 
-### Code Splitting
+#### dependencias: 
+dependencies: { 
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
+    "firebase": "^9.6.4",
+    "formik": "^2.2.9",
+    "@emotion/react": "^11.7.1",
+    "@mui/icons-material": "^5.2.4",
+    "@mui/material": "^5.2.4",
+    "@mui/system": "^5.2.6",,
+    },
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Instalación
 
-### Analyzing the Bundle Size
+1. Clonar el repositorio en la carpeta donde desee crear el proyecto:
+   https://github.com/guillermovicenteprieto/tiendaNuco-React-GuillermoVicente.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Instalar las dependencias necesarias para poder correr el proyecto:
+    #### npm install
 
-### Making a Progressive Web App
+3. Correr el proyecto:
+    #### npm start
+    http://localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### E-COMMERCE PROJECT
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# tiendaNuco-React-GuillermoVicente" 
+[Tienda NUCO](https://tiendanuco.netlify.app/)

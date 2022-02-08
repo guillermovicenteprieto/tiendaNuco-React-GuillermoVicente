@@ -1,4 +1,4 @@
-.itemListTitle{
+/* .itemListTitle{
     margin-top: 10px;
     margin-left: 75px;
     margin-right: 75px;
@@ -16,12 +16,13 @@
     color: #000000;
     margin: 10px;
     min-height: 70vh;
-};
+}; */
 
-.list-container{
+/* .list-container{
     color:#000000;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+    align-items: center;
+} */
 

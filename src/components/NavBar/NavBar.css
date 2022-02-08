@@ -1,4 +1,4 @@
-.logoPrincipal {
+/* .logoPrincipal {
     width: 10em;
     padding: 1px;
     display: inline-block;
@@ -26,8 +26,6 @@ navbarLinksActive{
     background-color: #0586e0;
     color: white;
 }
-
-
 
 .navbarLinks {
     margin: 5px;
@@ -67,3 +65,11 @@ navbarLinksActive{
     font-size: 10px;
 }
   
+.navbarResponsive {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: transparent;
+    padding: 5px;
+}
+ */

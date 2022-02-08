@@ -5,6 +5,7 @@
 .addressClass {
     padding-top: 20px;
     color: #ffffff;
+    font-family: Roboto;
     font-size: .7em;
     text-align: center;
     letter-spacing: .05em;
@@ -14,6 +15,7 @@
     color: #ffffff;
     font-size: .85em;
     text-align: center;
+    font-family: Roboto;
     letter-spacing: .05em;
     padding-bottom: 1em;
 }

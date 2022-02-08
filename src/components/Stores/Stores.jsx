@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
-import CardContent from "@mui/material/CardContent";
-import "./Stores.css";
+import { Box } from "@mui/material";
 
 const Stores = () => {
   const [store, setStore] = useState([]);
-
   //lllamado a API para simular tiendas fisicas
   const storesAPI = async () => {
     const data = await fetch(
-      "https://jsonplaceholder.typicode.com/users/?_limit=9"
+      "https://jsonplaceholder.typicode.com/users/?_limit=8"
     );
     const store = await data.json();
     setStore(store);
@@ -20,23 +18,27 @@ const Stores = () => {
 
   return (
     <div className="storesContainer">
-      <h5 className="titleComponent">
+      <h3 className="titleStoresComponent">
         <i>NUCO points!</i> También en tiendas físicas en Centros Comerciales
-      </h5>
+      </h3>
       {
         <div className="styleContainer">
           {store.map((store) => (
-            <CardContent
-              key={store.username}
-              className="teamListCard listCards"
-            >
-              <h4>{store.username} Store</h4>
-              <h6>Telefono: {store.phone}</h6>
-              <h6>
-                Dirección: {store.address.street} {store.address.suite}
-              </h6>
-              <h5>Ciudad: {store.address.city}</h5>
-            </CardContent>
+            <Box key={store.username} className="storeListCard listCardStore">
+              <h3>
+                {store.company.name} | {store.username} Store
+              </h3>
+              <h5>{store.company.catchPhrase}</h5>
+              <h5>{store.company.bs}</h5>
+              <h5>Telefono: {store.phone}</h5>
+              <h5>Email: {store.email}</h5>
+              <h5>
+                Dirección: {store.address.street} Nº {store.address.suite}
+              </h5>
+              <h4>
+                Ciudad: {store.address.city} - CP.:{store.address.zipcode}
+              </h4>
+            </Box>
           ))}
         </div>
       }
